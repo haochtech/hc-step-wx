@@ -1,0 +1,12 @@
+<image class="ashca" src="{{setaa.questionpic}}"></image>
+<view class="cadvv"></view>
+<Icon id="Icon" img="{{iconimh}}" phone="{{phone}}" poc="{{poc}}" txt="{{txttex}}"></Icon>
+<view bindtap="dainj" class="baoluo" data-index="{{index}}" wx:for="{{tempInfo}}">
+    <view class="tiao">
+        <view class="hogn">{{index+1}}、</view>
+        <text class="xhuai">{{item.title}}</text>
+        <image class="qyud" src="../../resource/images/xiang.png" wx:if="{{!item.flag}}"></image>
+        <image class="qyud" src="../../resource/images/xai.png" wx:if="{{item.flag}}"></image>
+    </view>
+    <text class="cdasvd" wx:if="{{item.flag}}">{{item.content}}</text>
+</view>

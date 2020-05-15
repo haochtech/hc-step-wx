@@ -1,0 +1,66 @@
+<image class="reward" src="{{Missionlist.img}}"></image>
+<view class="views">
+    <view class="reward_viewq" wx:for="{{Missionlist.list}}">
+        <block wx:if="{{item.mission_type==4}}">
+            <image class="reward_viewq_img" src="{{item.mission_icon}}"></image>
+            <view class="reward_uand">
+                <text>{{item.title}}</text>
+                <text>{{item.title2}}</text>
+            </view>
+            <button bindtap="getPhoneNumberqu" class="huang" data-ad="{{item.ad}}" data-mission_id="{{item.id}}" wx:if="{{item.flag==0}}">+{{item.step}}步</button>
+            <view bindtap="lingqu" class="huang" data-mission_id="{{item.id}}" style="background:red;color:#fff;" wx:if="{{item.flag==1}}">领取{{item.step}}步</view>
+            <button bindtap="lingqu" class="huang" data-mission_id="{{item.id}}" disabled="false" style="background:#eaeaea;" wx:if="{{item.flag==2}}">+{{item.step}}步</button>
+            <view class="xiaha"></view>
+            <view class="xiahat"></view>
+        </block>
+        <block wx:if="{{item.mission_type==0}}">
+            <image class="reward_viewq_img" src="{{item.mission_icon}}"></image>
+            <view class="reward_uand">
+                <text>{{item.title}}</text>
+                <text>{{item.title2}}</text>
+            </view>
+            <button class="huang" data-mission_id="{{item.id}}" openType="share" wx:if="{{item.flag==0}}">+{{item.step}}步</button>
+            <view bindtap="lingqu" class="huang" data-mission_id="{{item.id}}" style="background:red;color:#fff;" wx:if="{{item.flag==1}}">领取{{item.step}}步</view>
+            <button class="huang" disabled="false" style="background:#eaeaea;" wx:if="{{item.flag==2}}">+{{item.step}}步</button>
+            <view class="xiaha"></view>
+            <view class="xiahat"></view>
+        </block>
+        <block wx:if="{{item.mission_type==1}}">
+            <image class="reward_viewq_img" src="{{item.mission_icon}}"></image>
+            <view class="reward_uand">
+                <text>{{item.title}}</text>
+                <text>{{item.title2}}</text>
+            </view>
+            <button bindtap="tiao" class="huang" data-appId="{{item.appid}}" data-mission_id="{{item.id}}" data-path="{{item.path}}" wx:if="{{item.flag==0}}">+{{item.step}}步</button>
+            <view bindtap="lingqu" class="huang" data-mission_id="{{item.id}}" style="background:red;color:#fff;" wx:if="{{item.flag==1}}">领取{{item.step}}步</view>
+            <button bindtap="lingqu" class="huang" data-mission_id="{{item.id}}" disabled="false" style="background:#eaeaea;" wx:if="{{item.flag==2}}">+{{item.step}}步</button>
+            <view class="xiaha"></view>
+            <view class="xiahat"></view>
+        </block>
+        <block wx:if="{{item.mission_type==2}}">
+            <image class="reward_viewq_img" src="{{item.mission_icon}}"></image>
+            <view class="reward_uand">
+                <text>{{item.title}}</text>
+                <text>{{item.title2}}</text>
+            </view>
+            <button bindtap="fdatie" class="huang" data-mission_id="{{item.id}}" wx:if="{{item.flag==0}}">+{{item.step}}步</button>
+            <view bindtap="lingqu" class="huang" data-mission_id="{{item.id}}" style="background:red;color:#fff;" wx:if="{{item.flag==1}}">领取{{item.step}}步</view>
+            <button bindtap="lingqu" class="huang" data-mission_id="{{item.id}}" disabled="false" style="background:#eaeaea;" wx:if="{{item.flag==2}}">+{{item.step}}步</button>
+            <view class="xiaha"></view>
+            <view class="xiahat"></view>
+        </block>
+        <block wx:if="{{item.mission_type==3}}">
+            <image class="reward_viewq_img" src="{{item.mission_icon}}"></image>
+            <view class="reward_uand">
+                <text>{{item.title}}</text>
+                <text>{{item.title2}}</text>
+            </view>
+            <button bindgetphonenumber="getPhoneNumber" class="huang" data-mission_id="{{item.id}}" openType="getPhoneNumber" wx:if="{{item.flag==0}}">+{{item.step}}步</button>
+            <view bindtap="lingqu" class="huang" data-mission_id="{{item.id}}" style="background:red;color:#fff;" wx:if="{{item.flag==1}}">领取{{item.step}}步</view>
+            <button bindtap="lingqu" class="huang" data-mission_id="{{item.id}}" disabled="false" style="background:#eaeaea;" wx:if="{{item.flag==2}}">+{{item.step}}步</button>
+            <view class="xiaha"></view>
+            <view class="xiahat"></view>
+        </block>
+    </view>
+</view>
+<view class="noMore" style="" wx:if="{{Missionlist.list==''||Missionlist.list==undefined}}">还没有任务哦~敬请期待</view>

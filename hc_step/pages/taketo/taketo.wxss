@@ -1,0 +1,68 @@
+.miyua_yui {
+    height: 100%;
+    width: 100%;
+    background: #fff;
+    border-radius: 10rpx;
+    padding: 0 30rpx;
+    position: relative;
+    box-sizing: border-box;
+}
+
+.tian {
+    width: 100%;
+    height: 96rpx;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #282828;
+    font-size: 32rpx;
+    border-bottom: 2rpx solid #ededed;
+}
+
+.suaohja {
+    width: 95%;
+    margin-left: 20rpx;
+    height: 86rpx;
+    display: flex;
+    align-items: center;
+    border-bottom: 2rpx solid #ededed;
+}
+
+.suaohja text {
+    color: #282828;
+    font-size: 26rpx;
+    width: 109rpx;
+}
+
+.suaohja input,.picker {
+    width: 70%;
+    align-items: center;
+    display: flex;
+    margin-left: 35rpx;
+    height: 100%;
+    font-size: 26rpx;
+    color: #808080;
+}
+
+.baouya {
+    width: 280rpx;
+    height: 80rpx;
+    margin: 0 auto;
+    margin-top: 420rpx;
+    color: #8a8a8a;
+    font-size: 30rpx;
+    border: 1rpx solid #8a8a8a;
+    border-radius: 50rpx;
+}
+
+.guan {
+    width: 40rpx;
+    height: 40rpx;
+    position: absolute;
+    top: -15rpx;
+    right: -15rpx;
+}
+
+.suaohja .picker {
+    width: 410rpx;
+}

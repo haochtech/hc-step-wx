@@ -1,0 +1,123 @@
+<view class="main">
+    <view class="head">
+        <text class="jiazua" style="color:{{setaa.updatetipcolor}}">{{setaa.updatetip}}</text>
+        <image class="head_img" src="{{setaa.activitypic}}"></image>
+        <view class="mystep">
+            <view class="mystep_one">
+                <text>我的步数</text>
+                <text>{{step}}步</text>
+            </view>
+            <form bindsubmit="submitInchallenge" class="mystep_two" reportSubmit="true">
+                <button class="kuodaa" formType="submit" hoverClass="none">
+                    <view class="mystep_two">
+                        <image src="../../resource/images/20180912155447.png"></image>
+                        <text>挑战明细</text>
+                    </view>
+                </button>
+            </form>
+            <Icon id="Icon" img="{{iconimh}}" phone="{{phone}}" poc="{{poc}}" txt="{{txttex}}"></Icon>
+            <form bindsubmit="submitInsearch" class="mystep_two" reportSubmit="true">
+                <button class="kuodaa" formType="submit" hoverClass="none">
+                    <view class="mystep_two">
+                        <image src="../../resource/images/yuo.png"></image>
+                        <text>规则说明</text>
+                    </view>
+                </button>
+            </form>
+        </view>
+    </view>
+    <view class="lower" hidden="{{sh_en==1?true:''}}">
+        <view class="more_battle">
+            <text bindtap="qiehuf" class="{{index==moretab?'moret':''}}" data-aid="{{item.id}}" data-index="{{index}}" wx:for="{{activity}}">{{item.step}}</text>
+        </view>
+        <view class="active">
+            <view class="enlist">报名中</view>
+            <text class="textqiyu">【{{Activitylist.tomorrow.day}}/周{{Activitylist.tomorrow.week}}】{{Activitylist.tomorrow.step}}步挑战活动</text>
+            <view class="active_one">
+                <view class="active_one_left">
+                    <view class="">
+                        <text class="numbhf">{{Activitylist.tomorrow.jiangjin}}</text>
+                        <text class="xaiore">{{setaa.coinname}}</text>
+                    </view>
+                    <view class="active_one_tio_text">
+                        <text>达成</text>
+                        <text class="textnum">{{Activitylist.tomorrow.step}}</text>
+                        <text>步即可平分奖金</text>
+                    </view>
+                    <text class="attend">{{Activitylist.tomorrow.entryfee}}{{setaa.coinname}}报名 已有{{Activitylist.tomorrow.renshu}}人参加</text>
+                </view>
+                <view class="active_one_right">
+                    <image class="dong" src="../../resource/images/sacsa.png"></image>
+                    <text class="daoji">倒计时 {{clock}}</text>
+                    <form bindsubmit="submitInming" class="baomica" reportSubmit="true">
+                        <button class="kuodaa" formType="submit" hoverClass="none">
+                            <view class="baomica">报名</view>
+                        </button>
+                    </form>
+                </view>
+            </view>
+        </view>
+        <view class="active">
+            <view class="enlist_two">进行中</view>
+            <text class="textqiyu">【{{Activitylist.today.day}}/周{{Activitylist.today.week}}】{{Activitylist.tomorrow.step}}步挑战活动</text>
+            <view class="jinxifn">
+                <text class="numbhf">{{Activitylist.today.success}}</text>
+                <text class="dahcneg">人已达成目标</text>
+                <view class="zongsan">
+                    <view class="zon_one">
+                        <text>{{Activitylist.today.returnrate}}%</text>
+                        <text>预计收益率</text>
+                    </view>
+                    <view class="zon_one">
+                        <text>{{Activitylist.today.zong}}</text>
+                        <text>参加人数</text>
+                    </view>
+                    <view class="zon_one">
+                        <text>{{Activitylist.today.jiangjin}}</text>
+                        <text>总奖励金</text>
+                    </view>
+                </view>
+            </view>
+            <text class="weichang">{{Activitylist.today.status==1?'您已参加该活动':'您未参加该活动'}}</text>
+        </view>
+        <view class="active">
+            <view class="enlist_tr">已结束</view>
+            <text class="textqiyu">【{{Activitylist.yesterday.day}}/周{{Activitylist.yesterday.week}}】{{Activitylist.tomorrow.step}}步挑战活动</text>
+            <view class="quybn">
+                <view class="mukla">
+                    <view class="qiyua">
+                        <text class="numbhsaf">{{Activitylist.yesterday.jiangjin}}</text>
+                        <text class="xaiore">{{setaa.coinname}}</text>
+                    </view>
+                    <text class="dahcnegca">奖金发给了达成目标的</text>
+                </view>
+                <view class="mukla">
+                    <view class="qiyua">
+                        <text class="numbhsaf">{{Activitylist.yesterday.success}}</text>
+                        <text class="xaiore">位</text>
+                    </view>
+                    <text class="dahcnegca">健康步数达人</text>
+                </view>
+            </view>
+            <text class="weichang">{{Activitylist.yesterday.status==1?'您已参加该活动':'您未参加该活动'}}</text>
+        </view>
+        <image bindtap="onPullDownRefresh" class="injmk" src="../../resource/images/20181023162233.png" wx:if="{{setaa.updatepic==''||setaa.updatepic==undefinder}}"></image>
+        <image bindtap="onPullDownRefresh" class="injmk" src="{{setaa.updatepic}}" wx:if="{{setaa.updatepic!=''||setaa.updatepic!=undefinder}}"></image>
+    </view>
+    <view class="paihang" hidden="{{sh_en==0?true:''}}">
+        <view class="more_battle" style="margin-bottom:51rpx;">
+            <text bindtap="qiehuf" class="{{index==moretab?'moret':''}}" data-aid="{{item.id}}" data-index="{{index}}" wx:for="{{activity}}">{{item.step}}</text>
+        </view>
+        <view class="paihang_one" wx:for="{{fake}}">
+            <view class="kuai" data-index="{{index}}">{{index}}</view>
+            <view class="paihang_two">
+                <image src="{{item.head_pic}}"></image>
+                <text>{{item.nick_name}}</text>
+            </view>
+            <view class="paihang_tre">
+                <text>{{item.step}}</text>
+                <text>步</text>
+            </view>
+        </view>
+    </view>
+</view>

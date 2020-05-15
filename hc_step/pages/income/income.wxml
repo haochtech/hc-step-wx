@@ -1,0 +1,26 @@
+<form bindsubmit="formSubmit" class="main">
+    <view class="record_toi">
+        <view class="nihdid">
+            <text>可提金额</text>
+            <text>{{lajnvds.user.rmb}}</text>
+        </view>
+        <view bindtap="fibefva" class="shuaj">收益记录</view>
+    </view>
+    <Icon id="Icon" img="{{iconimh}}" phone="{{phone}}" poc="{{poc}}" txt="{{txttex}}"></Icon>
+    <view class="duihujilu">
+        <view class="tiuja">提现金额</view>
+        <view class="uanf">
+            <text class="unfa_fu">￥</text>
+            <input name="tmoney" placeholder="最少提现{{lajnvds.set.min_hbtxmoney}}元" value="{{tmoney}}"></input>
+            <text bindtap="quan" class="ahudbn">全部</text>
+        </view>
+        <button class="tuma" formType="submit">提现</button>
+        <button class="isdasa" openType="share">邀请好友，一起领红包</button>
+    </view>
+    <view class="Presentation">
+        <view class="titlia">
+      提现说明：
+      </view>
+        <text>{{lajnvds.set.txinfo}}</text>
+    </view>
+</form>

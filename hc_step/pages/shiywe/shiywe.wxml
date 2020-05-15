@@ -1,0 +1,45 @@
+<view class="topa-a">
+    <view class="topa-b">
+        <text bindtap="qifuyua" class="{{state==index?'linetext':''}}" data-index="{{index}}" wx:for="{{line}}">{{item}}</text>
+    </view>
+</view>
+<Icon id="Icon" img="{{iconimh}}" phone="{{phone}}" poc="{{poc}}" txt="{{txttex}}"></Icon>
+<view hidden="{{state==1?true:''}}">
+    <view class="miyuto" wx:for="{{log}}">
+        <view class="miyutoa_asdcv">
+            <image src="{{item.logo}}"></image>
+            <view class="yuqis">
+                <text>{{item.goods_name}}</text>
+                <text>{{item.sheng}}{{item.shi}}{{item.qu}}{{item.address}}</text>
+            </view>
+        </view>
+        <view bindtap="secrity" class="huifsa" data-order_id="{{item.id}}" style="border-bottom:2rpx dotted #ececec;padding-bottom:10rpx;">
+            <text class="{{item.guoqi==1?'hui':''}}">{{item.guoqi==1?'已过期':'未核销'}}</text>
+            <image src="../../resource/images/1530847043.png"></image>
+        </view>
+        <view bindtap="secrity" class="huifsaa" data-order_id="{{item.id}}">
+            <text>领取时间：{{item.paytime}}</text>
+        </view>
+        <view bindtap="secrity" class="huifsaa" data-order_id="{{item.id}}">
+            <text>到期时间：{{item.endtime}}</text>
+        </view>
+    </view>
+</view>
+<view hidden="{{state==0?true:''}}">
+    <view class="miyuto" wx:for="{{logtwo}}">
+        <view class="miyutoa_asdcv">
+            <image src="{{item.logo}}"></image>
+            <view class="yuqis">
+                <text>{{item.goods_name}}</text>
+                <text>{{item.sheng}}{{item.shi}}{{item.qu}}{{item.address}}</text>
+            </view>
+        </view>
+        <view class="huifs">
+            <text>已核销</text>
+            <text>{{item.hexiaotime}}</text>
+        </view>
+    </view>
+</view>
+<view bindtap="secrity" class="huiapof" hidden="{{yua}}">
+    <image src="{{dianpi.url}}"></image>
+</view>

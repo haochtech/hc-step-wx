@@ -1,0 +1,13 @@
+<block wx:if="{{sh_en==0}}">
+    <view class="main">
+        <image bindtap="tyuia" class="ciah" data-ad="{{item.ad}}" data-diypic="{{item.diypic}}" data-h5="{{item.h5}}" data-id="{{item.id}}" data-jump="{{item.jump}}" data-xcxappid="{{item.xcxappid}}" data-xcxpath="{{item.xcxpath}}" src="{{item.entrypic}}" wx:for="{{mainlist}}"></image>
+    </view>
+    <Icon id="Icon" img="{{iconimh}}" phone="{{phone}}" poc="{{poc}}" txt="{{txttex}}"></Icon>
+    <view class="adBackView" wx:if="{{setaa.adunit6}}">
+        <ad id="gg" unitId="{{setaa.adunit6}}" wx:if="{{setaa.adunit6}}"></ad>
+    </view>
+</block>
+<view class="xsiavbds" wx:if="{{sh_en==1}}">
+    <image class="imtyge" src="{{setaa.no}}"></image>
+    <image class="imtyge" src="{{setaa.no2}}"></image>
+</view>

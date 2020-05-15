@@ -1,0 +1,6 @@
+<view class="bushid">
+    <view class="bidhtext" wx:for="{{sonlist}}">
+        <image src="{{item.head_pic}}"></image>
+        <text>{{item.nick_name}}</text>
+    </view>
+</view>

@@ -1,0 +1,58 @@
+<image bindtap="fan" class="markimg" src="../../images/f.png" style="top:{{top}}px;"></image>
+<view class="main">
+    <image class="contentimg" src="../../images/fem_01.png"></image>
+    <image bindtap="mark" class="contentimga" src="../../images/mfn.png"></image>
+    <image bindtap="index" class="sh" src="../../images/sh.png"></image>
+    <text class="tija">为您推荐</text>
+    <view class="listd">
+        <navigator class="danhu" data-id="{{item.id}}" data-paytype="{{item.paytype}}" data-selltype="{{item.selltype}}" hoverClass="none" url="../../../pages/detail/detail?id={{item.id}}&index=1&paytype={{item.paytype}}&selltype={{item.selltype}}" wx:for="{{goodsist}}">
+            <view class="ware">
+                <image class="tucda" src="{{item.main_img}}"></image>
+                <view class="sahus">
+                    <text class="shangf">{{item.goods_name}}</text>
+                    <view class="gfuizhi">
+                        <text class="honghaa" wx:if="{{item.paytype==1}}">原价：{{item.maxrmb}}元</text>
+                        <text class="hsudui">剩余{{item.inventory}}件</text>
+                    </view>
+                    <view class="head_one" wx:if="{{item.paytype==0}}">
+                        <image src="../../../resource/images/pao.png" wx:if="{{item.selltype!=2}}"></image>
+                        <text wx:if="{{item.selltype!=2}}">{{item.price}}{{setaa.coinname}}</text>
+                        <text wx:if="{{item.selltype==2}}">邀请{{item.minpeople}}个好友免费送</text>
+                    </view>
+                    <view class="head_one" wx:if="{{item.paytype==1}}">
+                        <image src="../../../resource/images/pao.png"></image>
+                        <text class="hongf">{{item.price2}}{{setaa.coinname}}+{{item.rmb}}元</text>
+                    </view>
+                </view>
+            </view>
+            <view class="csavdas">
+                <image src="../../../resource/images/avds.png"></image>
+                <text>{{item.paytype==0?'免费兑换':'立即兑换'}}</text>
+            </view>
+        </navigator>
+    </view>
+    <view class="qusian" hidden="{{loding}}">
+        <image src="../../../resource/images/5-121204193R0-50.gif"></image>
+        <text>加载中...</text>
+    </view>
+</view>
+<view class="bake" wx:if="{{Mask}}">
+    <view class="tiaf">
+        <image class="tiaf_img" src="../../images/tan.png"></image>
+        <view class="meitin">每日仅限 <text>免费挑战一次</text>
+        </view>
+        <view class="trommor">请明天再来</view>
+        <text class="bottomgui">通过下方活动邀请5个好友助力</text>
+        <text class="bottomguir">可以再免费玩1次</text>
+        <view class="myzhia">我知道了</view>
+    </view>
+</view>
+<view catchtouchmove="true" class="denglu" wx:if="{{shouquan==1}}">
+    <view class="denglu_ong">
+        <image class="imhyua" src="../../images/deng.png"></image>
+        <text> 使用微信授权登录后才允许操作哦~</text>
+        <button bindgetuserinfo="getUserInfo" class="register" openType="getUserInfo" type="primary">
+      安全登录
+      </button>
+    </view>
+</view>

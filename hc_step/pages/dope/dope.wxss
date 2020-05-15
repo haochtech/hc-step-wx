@@ -1,0 +1,105 @@
+page {
+    background: #f8f8f8;
+    padding-top: 85rpx;
+}
+
+.tabbartop {
+    width: 100%;
+    padding: 0 92rpx;
+    box-sizing: border-box;
+    background: #fff;
+    display: flex;
+    height: 85rpx;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    z-index: 10;
+}
+
+.tabbartop text {
+    color: #7f7f7f;
+    font-size: 32rpx;
+    line-height: 78rpx;
+    border-bottom: 4rpx solid #fff;
+}
+
+.tabbartop .fowwolone {
+    color: #353535;
+    font-size: 32rpx;
+    border-bottom: 4rpx solid #cb0000;
+}
+
+.main {
+    width: 100%;
+}
+
+.list {
+    width: 100%;
+    padding: 0 29rpx;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 158rpx;
+    background: #fff;
+    margin-top: 20rpx;
+    border-bottom: 2rpx solid #f1f1f1;
+}
+
+.thing {
+    width: 80rpx;
+    height: 80rpx;
+    border-radius: 100%;
+}
+
+.views_vi {
+    height: 118rpx;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-right: auto;
+    margin-left: 20rpx;
+    width: 70%;
+}
+
+.name {
+    color: #494949;
+    font-size: 28rpx;
+}
+
+.views_cent {
+    color: #757575;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    font-size: 22rpx;
+    width: 100%;
+}
+
+.views_cent image {
+    width: 28rpx;
+    height: 28rpx;
+    padding-left: 20rpx;
+}
+
+.time {
+    font-size: 19rpx;
+    color: #757575;
+}
+
+.yuan {
+    width: 90rpx;
+    height: 90rpx;
+}
+
+.noMore {
+    height: 257rpx;
+    padding-top: 80rpx;
+    box-sizing: border-box;
+    text-align: center;
+    font-size: 28rpx;
+    color: #999999;
+}

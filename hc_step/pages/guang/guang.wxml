@@ -1,0 +1,3 @@
+<view class="sav">
+    <ad class="csadca" style="margin-bottom:20rpx;" unitId="{{setaa.adunit}}"></ad>
+</view>

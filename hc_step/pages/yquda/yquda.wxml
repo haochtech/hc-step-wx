@@ -1,0 +1,11 @@
+<view wx:if="{{!combine}}">
+    <view bind:touchend="touchEnd" bind:touchmove="touchMove" bind:touchstart="touchStart" class="container" id="container">
+        <image class="bg" src="{{bgPic}}"></image>
+        <icon class="handle" color="green" id="handle" style="top:{{handleCenterY-10+'px'}};left:{{handleCenterX-10+'px'}}" type="waiting"></icon>
+        <image class="hat" id="hat" src="../../image/{{currentHatId}}.png" style="top:{{hatCenterY-hatSize/2-2+'px'}};left:{{hatCenterX-hatSize/2-2+'px'}};transform:rotate({{rotate+'deg'}}) scale({{scale}})"></image>
+    </view>
+    <button bind:tap="combinePic">确定</button>
+    <scroll-view class="scrollView" scrollX="true">
+        <image bind:tap="chooseImg" class="imgList" data-hat-id="{{index+1}}" src="../../image/{{index+1}}.png" wx:for=".......imgList" wx:key="{{index+1}}"></image>
+    </scroll-view>
+</view>

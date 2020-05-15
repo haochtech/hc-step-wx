@@ -1,0 +1,72 @@
+<view class="activity" hidden="{{sh_en==1?true:''}}">
+    <view class="zhuan">
+        <Icon id="Icon" img="{{iconimh}}" phone="{{phone}}" poc="{{poc}}" txt="{{txttex}}"></Icon>
+        <view class="head_two">
+            <image src="{{setaa.coinpic}}" wx:if="{{setaa.coinpic!=''&&setaa.coinpic!=undefined}}"></image>
+            <image src="../../resource/images/pao.png" wx:if="{{setaa.coinpic==''||setaa.coinpic==undefined}}"></image>
+            <text>{{money}}</text>
+        </view>
+        <view id="container">
+            <image class="container_img" src="../../resource/images/wyuh.png"></image>
+            <view class="{{amplification_index===1?'indexli':''}}" data-index="1" id="li">
+                <image src="{{goods[0].main_img}}"></image>
+                <text>{{goods[0].goods_name}}</text>
+                <view></view>
+            </view>
+            <view class="{{amplification_index===2?'indexli':''}}" data-index="2" id="li">
+                <image src="{{goods[1].main_img}}"></image>
+                <text>{{goods[1].goods_name}}</text>
+                <view></view>
+            </view>
+            <view class="{{amplification_index===3?'indexli':''}}" data-index="3" id="li">
+                <image src="{{goods[2].main_img}}"></image>
+                <text>{{goods[2].goods_name}}</text>
+                <view></view>
+            </view>
+            <view class="{{amplification_index===8?'indexli':''}} " data-index="8" id="li">
+                <p class="xiexie">谢谢惠顾</p>
+                <view></view>
+            </view>
+            <view bindtap="startrolling" id="li">
+                <image class="ljcj" src="../../resource/images/ljcj.png"></image>
+            </view>
+            <view class="{{amplification_index===4?'indexli':''}}" data-index="4" id="li">
+                <image src="{{goods[3].main_img}}"></image>
+                <text>{{goods[3].goods_name}}</text>
+                <view></view>
+            </view>
+            <view class="{{amplification_index===7?'indexli':''}}" data-index="7" id="li">
+                <image src="{{goods[6].main_img}}"></image>
+                <text>{{goods[6].goods_name}}</text>
+                <view></view>
+            </view>
+            <view class="{{amplification_index===6?'indexli':''}}" data-index="6" id="li">
+                <image src="{{goods[5].main_img}}"></image>
+                <text>{{goods[5].goods_name}}</text>
+                <view></view>
+            </view>
+            <view class="{{amplification_index===5?'indexli':''}}" id="li">
+                <image src="{{goods[4].main_img}}"></image>
+                <text>{{goods[4].goods_name}}</text>
+                <view></view>
+            </view>
+            <p id="pp"></p>
+        </view>
+    </view>
+    <view class="listd">
+        <view class="danhu" data-id="{{item.id}}" wx:for="{{goods}}">
+            <view class="ware">
+                <image class="tucda" src="{{item.main_img}}"></image>
+                <text class="shangf">{{item.goods_name}}</text>
+            </view>
+            <view class="qiusa">
+                <image src="../../resource/images/jiang.png"></image>
+                <text>奖品展示</text>
+            </view>
+        </view>
+    </view>
+</view>
+<view class="xsiavbds" hidden="{{sh_en==0?true:''}}">
+    <image class="imtyge" src="{{setaa.no}}"></image>
+    <image class="imtyge" src="{{setaa.no2}}"></image>
+</view>

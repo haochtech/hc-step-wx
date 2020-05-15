@@ -1,0 +1,115 @@
+.sports-calendar {
+    background: #f8f8f8;
+    min-height: 100%;
+}
+
+.sports-calendar .bar {
+    height: 80rpx;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    width: 350rpx;
+    padding: 0 200rpx;
+    border-top: 1rpx solid #ececec;
+}
+
+.sports-calendar .bar .previous {
+    width: 50rpx;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.sports-calendar .previous image {
+    width: 15rpx;
+    height: 24rpx;
+    display: block;
+}
+
+.sports-calendar .bar .date {
+    width: 275rpx;
+    line-height: 79rpx;
+    text-align: center;
+    font-size: 32rpx;
+    color: #404040;
+    font-weight: bold;
+}
+
+.sports-calendar .bar .next {
+    width: 50rpx;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.sports-calendar .next image {
+    width: 15rpx;
+    height: 24rpx;
+    display: block;
+    transform: rotate(180deg);
+}
+
+.sports-calendar .week {
+    height: 70rpx;
+    padding: 0 25rpx;
+    line-height: 70rpx;
+    display: flex;
+}
+
+.sports-calendar .week .week-num {
+    flex: 1;
+    text-align: center;
+    font-size: 24rpx;
+    color: #868686;
+    font-weight: bold;
+}
+
+.sports-calendar .days-box {
+    padding: 0 24rpx 0 25rpx;
+}
+
+.sports-calendar .days-box .days {
+    border-left: 1rpx solid #ececec;
+    border-top: 1rpx solid #ececec;
+}
+
+.days .columns {
+    display: flex;
+}
+
+.days .columns .rows {
+    width: 100rpx;
+    height: 100rpx;
+    border-right: 1rpx solid #ececec;
+    border-bottom: 1rpx solid #ececec;
+    background: #fff;
+}
+
+.rows .cell {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.rows .cell .day {
+    position: absolute;
+    right: 13rpx;
+    top: 0;
+    font-size: 20rpx;
+    line-height: 40rpx;
+    color: #b2b2b2;
+}
+
+.rows .cell .step-num {
+    font-size: 24rpx;
+    line-height: 40rpx;
+    color: #868686;
+    font-weight: bold;
+}
+
+.rows .cell .step-num.large {
+    color: #FF9E2B;
+}

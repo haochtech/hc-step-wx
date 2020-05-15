@@ -1,0 +1,113 @@
+.reward {
+    width: 100%;
+    height: 328rpx;
+}
+
+page {
+    background: #a67ef2;
+}
+
+.views {
+    padding: 0 30rpx;
+    box-sizing: border-box;
+    width: 100%;
+}
+
+.reward_viewq {
+    width: 100%;
+    padding: 0 30rpx;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #fff;
+    position: relative;
+    height: 160rpx;
+    box-sizing: border-box;
+    border-radius: 15rpx;
+    z-index: 10;
+    margin-bottom: 50rpx;
+}
+
+.reward_uand {
+    display: flex;
+    flex-direction: column;
+    margin-right: auto;
+    width: 51%;
+    white-space: wrap;
+    margin-left: 26rpx;
+}
+
+.reward_uand text {
+    color: #a67ef2;
+    font-size: 24rpx;
+}
+
+.reward_uand text:first-child {
+    color: #616161;
+    font-size: 32rpx;
+    margin-top: -15rpx;
+}
+
+.reward_viewq_img {
+    width: 100rpx;
+    height: 100rpx;
+}
+
+.huang {
+    width: 150rpx;
+    height: 60rpx;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #ffcc43;
+    border-radius: 50rpx;
+    color: #ffffff;
+    font-size: 24rpx;
+}
+
+.xiaha {
+    width: 96%;
+    height: 50rpx;
+    position: absolute;
+    left: 2%;
+    background: rgba(255,255,255,0.5);
+    bottom: -10rpx;
+    z-index: 3;
+    border-radius: 15rpx;
+}
+
+.xiahat {
+    width: 90%;
+    height: 50rpx;
+    position: absolute;
+    left: 5%;
+    background: rgba(255,255,255,0.3);
+    bottom: -20rpx;
+    z-index: 2;
+    border-radius: 15rpx;
+}
+
+.button-hover {
+    background-color: none;
+}
+
+button {
+    padding: 0;
+    margin: 0;
+    border-radius: 0;
+    background: none;
+    line-height: normal;
+}
+
+button::after {
+    content: none;
+}
+
+.noMore {
+    height: 257rpx;
+    padding-top: 80rpx;
+    box-sizing: border-box;
+    text-align: center;
+    font-size: 28rpx;
+    color: #999999;
+}

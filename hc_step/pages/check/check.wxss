@@ -1,0 +1,167 @@
+page {
+    width: 100%;
+    height: 100%;
+}
+
+.main {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.back_img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.chickbtn {
+    width: 30%;
+    height: 80rpx;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    bottom: 107rpx;
+    background: linear-gradient(#fe5300,#da0600);
+    left: 35%;
+    color: #fff;
+    font-size: 36rpx;
+    border-radius: 15rpx;
+}
+
+.zhehua {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: rgba(0,0,0,0.5);
+}
+
+.zhehua_view {
+    width: 90%;
+    height: 691rpx;
+    background: #fff;
+    border-radius: 15rpx;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    position: absolute;
+    top: 19%;
+    left: 5%;
+    padding: 0 47rpx;
+    box-sizing: border-box;
+}
+
+.inputlist {
+    width: 100%;
+    height: 74rpx;
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #d2d2d2;
+}
+
+.inputlist text {
+    width: 148rpx;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    color: #ff7923;
+    font-size: 28rpx;
+}
+
+.inputlist input {
+    height: 100%;
+    border: 0;
+    display: flex;
+    align-items: center;
+    color: #b5b5b5;
+    font-size: 24rpx;
+}
+
+.treejo {
+    position: relative;
+    margin-left: auto;
+}
+
+.treejo::before {
+    position: absolute;
+    top: -10rpx;
+    content: "";
+    right: 0;
+    width: 0;
+    height: 0;
+    border-left: 13rpx solid transparent;
+    border-right: 13rpx solid transparent;
+    border-top: 17rpx solid #959595;
+}
+
+.shwnfia {
+    color: #ff6b00;
+    font-size: 36rpx;
+    margin: 50rpx 0 28rpx 0;
+}
+
+.Admission {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.Admission {
+    margin-top: 53rpx;
+}
+
+.Admission text {
+    color: #ff7923;
+    font-size: 48rpx;
+}
+
+.Admission text:first-child {
+    color: #ff7923;
+    font-size: 36rpx;
+}
+
+.button-hover {
+    background-color: none;
+}
+
+button {
+    padding: 0;
+    margin: 0;
+    border-radius: 0;
+    background: none;
+    line-height: normal;
+}
+
+button::after {
+    content: none;
+}
+
+.btn {
+    width: 402rpx;
+    height: 60rpx;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(#fe5300,#da0600);
+    color: #fff;
+    font-size: 30rpx;
+    border-radius: 50rpx;
+    margin-top: 60rpx;
+}
+
+.zhehua_img {
+    width: 50rpx;
+    height: 50rpx;
+    right: 50rpx;
+    top: 14%;
+    position: absolute;
+    display: block;
+    z-index: 1;
+}

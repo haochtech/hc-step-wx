@@ -1,0 +1,164 @@
+.xmad-h5 {
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+view {
+    box-sizing: border-box;
+}
+
+.swiper-container {
+    width: 100%;
+    height: 360rpx;
+}
+
+.image-container {
+    display: flex;
+}
+
+.xmad-h5 button.sub-button {
+    width: 100%;
+    height: 80rpx;
+    color: #fff;
+    font-size: 32rpx;
+    text-align: center;
+    background-color: #ff7300!important;
+}
+
+.xmad-h5 .form-title {
+    text-align: left;
+    padding: 26rpx 30rpx;
+    border-bottom: 1rpx solid #ddd;
+}
+
+.xmad-h5 .form-title .h2 {
+    color: #353535;
+    font-size: 30rpx;
+    font-weight: 700;
+}
+
+.xmad-h5 .form-content {
+    font-size: 28rpx;
+    padding: 0 30rpx 30rpx;
+}
+
+.xmad-h5 .goods-item {
+    width: 100%;
+    margin-top: 30rpx;
+    align-items: center;
+}
+
+.xmad-h5 .goods-name,.xmad-h5 .goods-price {
+    display: inline-block;
+}
+
+.xmad-h5 .goods-price {
+    color: #ff7300;
+    margin-left: 20rpx;
+}
+
+.xmad-h5 .detail-select {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 30rpx;
+}
+
+.xmad-h5 .detail-item {
+    font-size: 26rpx;
+    min-width: 110rpx;
+    padding: 10rpx 15rpx;
+    text-align: center;
+    border-radius: 4px;
+    background-color: #f4f4f4;
+    margin-right: 28rpx;
+    margin-bottom: 20rpx;
+}
+
+.xmad-h5 .detail-item.selected {
+    color: #fff;
+    background-color: #ff7300;
+}
+
+.xmad-h5 .goods-num {
+    display: flex;
+    height: 60rpx;
+}
+
+.xmad-num-picker .disabled {
+    color: rgba(51,51,51,0.3);
+}
+
+.xmad-num-picker {
+    display: flex;
+    margin-left: 50rpx;
+    border: none;
+    background-color: #f7f7f7;
+}
+
+.xmad-num-picker .sub,.xmad-num-picker .add {
+    display: flex;
+    width: 40rpx;
+    align-items: center;
+    justify-content: center;
+    border: 1rpx solid #F7F7F7;
+}
+
+.xmad-num-picker .sub {
+    border-bottom-left-radius: 4rpx;
+    border-top-left-radius: 4rpx;
+}
+
+.xmad-num-picker .add {
+    border-bottom-right-radius: 4rpx;
+    border-top-right-radius: 4rpx;
+}
+
+.xmad-num-picker input {
+    display: flex;
+    width: 100rpx;
+    text-align: center;
+    align-items: center;
+}
+
+.xmad-h5 .goods-item textarea {
+    width: 100%;
+    padding: 2%;
+    height: 240rpx;
+    border: 1px solid #f0f0f0;
+    box-sizing: border-box;
+}
+
+.disclaimer {
+    color: #aaa;
+    text-align: center;
+}
+
+.xmad-contact {
+    position: fixed;
+    right: 0;
+    bottom: 100rpx;
+    z-index: 1024;
+}
+
+.xmad-contact image {
+    width: 144rpx;
+    height: 144rpx;
+}
+
+.quick-icon {
+    position: fixed;
+    right: 0;
+    top: 14%;
+    padding: 10rpx 8rpx 10rpx 14rpx;
+    border-top-left-radius: 24rpx;
+    border-bottom-left-radius: 24rpx;
+    background-color: #ff7300;
+    z-index: 1024;
+}
+
+.quick-icon .icon {
+    color: #fff;
+    font-size: 24rpx;
+}

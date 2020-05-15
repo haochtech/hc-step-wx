@@ -1,0 +1,6 @@
+<view class="example" hidden="{{npm}}">
+    <image class="mygoldsk" src="../../resource/images/notice_icon.png"></image>
+    <view class="marquee_container" style="--marqueeWidth--:-25em">
+        <view class="marquee_text">{{Marquistext}}</view>
+    </view>
+</view>

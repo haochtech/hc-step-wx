@@ -1,0 +1,45 @@
+<view class="tabbartop">
+    <text bindtap="followqe" class="{{fowwolindex==index?'fowwolone':''}}" data-index="{{index}}" wx:for="{{fowwol}}">{{item}}</text>
+</view>
+<view class="main">
+    <view class="" wx:if="{{fowwolindex==0}}">
+        <view bindtap="detailsid" class="list" data-dt_id="{{item.dt_id}}" wx:for="{{AllDt_new}}">
+            <image class="thing" src="{{item.head_pic}}"></image>
+            <view class="views_vi">
+                <text class="name">{{item.nick_name}}</text>
+                <view class="views_cent">
+          {{item.text}}
+          </view>
+                <text class="time">{{item.time}}</text>
+            </view>
+        </view>
+        <view class="noMore" style="" wx:if="{{AllDt_new==''&&fowwolindex==0}}">没有更多内容了</view>
+    </view>
+    <view class="" wx:if="{{fowwolindex==1}}">
+        <view bindtap="detailsid" class="list" data-dt_id="{{item.dt_id}}" wx:for="{{AllDt_new}}">
+            <image class="thing" src="{{item.head_pic}}"></image>
+            <view class="views_vi">
+                <text class="name">{{item.nick_name}}</text>
+                <view class="views_cent">
+         {{item.text}}
+        </view>
+                <text class="time">{{item.time}}</text>
+            </view>
+        </view>
+        <view class="noMore" wx:if="{{AllDt_new==''&&fowwolindex==1}}">没有更多内容了</view>
+    </view>
+    <view class="" wx:if="{{fowwolindex==2}}">
+        <view bindtap="detailsid" class="list" data-dt_id="{{item.dt_id}}" wx:for="{{AllDt_new}}">
+            <image class="thing" src="{{item.head_pic}}"></image>
+            <view class="views_vi">
+                <text class="name">{{item.nick_name}}</text>
+                <view class="views_cent">
+         {{item.text}}
+        </view>
+                <text class="time">{{item.time}}</text>
+            </view>
+            <image class="yuan" src="{{item.img}}"></image>
+        </view>
+        <view class="noMore" style="" wx:if="{{AllDt_new==''&&fowwolindex==2}}">没有更多内容了</view>
+    </view>
+</view>

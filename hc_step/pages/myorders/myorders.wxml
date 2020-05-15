@@ -1,0 +1,17 @@
+<view class="avh" wx:if="{{qie==1}}">
+    <view class="duihuan">
+        <text>奖品名</text>
+        <text>兑换个数</text>
+        <text>兑换时间</text>
+    </view>
+    <view class="duihuan_idal" wx:if="{{qie==1}}" wx:for="{{Logtwo}}">
+        <text class="vics">{{item.goods_name}}</text>
+        <text>1</text>
+        <view class="huanhuanji">
+            <view class="weihua " wx:if="{{item.fahuo=='待发货'}}">{{item.fahuo}}</view>
+            <text class="wanhcf" wx:if="{{item.fahuo=='已发货'}}">{{item.fahuo}}</text>
+            <text class="odd" wx:if="{{item.fahuo=='已发货'}}">{{item.expressname}}：{{item.express}}</text>
+            <text class="oddtime">{{item.fahuo=='已发货'?item.fahuotime:item.time}}</text>
+        </view>
+    </view>
+</view>

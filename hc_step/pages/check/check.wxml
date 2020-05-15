@@ -1,0 +1,36 @@
+<view class="main">
+    <image class="back_img" src="../../resource/images/s.png"></image>
+    <view bindtap="yuab" class="chickbtn">申请入驻</view>
+</view>
+<view class="zhehua" wx:if="{{enter}}">
+    <image bindtap="yuab" class="zhehua_img" src="../../resource/images/back.png"></image>
+    <form bindsubmit="formSubmit">
+        <view class="zhehua_view">
+            <view class="shwnfia">填写申请资料</view>
+            <view class="inputlist">
+                <text>店铺名称:</text>
+                <input placeholder="XXXXX"></input>
+            </view>
+            <view class="inputlist">
+                <text>店铺区域：</text>
+                <picker bindchange="bindRegionChange" customItem="{{customItem}}" mode="region" value="{{region}}">
+                    <input disabled="true" placeholder="请选择地址" value="{{region}}"></input>
+                </picker>
+                <view class="treejo"></view>
+            </view>
+            <view class="inputlist">
+                <text>详细地址：</text>
+                <input placeholder="请填写详细地址"></input>
+            </view>
+            <view class="inputlist">
+                <text>联系电话：</text>
+                <input placeholder="请填写联系电话"></input>
+            </view>
+            <view class="Admission">
+                <text>入住费</text>
+                <text>88元</text>
+            </view>
+            <button class="btn" formType="submit">点击提交申请</button>
+        </view>
+    </form>
+</view>

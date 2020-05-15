@@ -1,0 +1,44 @@
+.tyting,.tytinga {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.tyting text,.tytinga text {
+    height: 90rpx;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #333333;
+    font-size: 25rpx;
+    width: 25%;
+}
+
+.tytinga .wuhui {
+    color: #121212;
+    font-size: 25rpx;
+}
+
+.tytinga .redhui {
+    color: #ff0000;
+    font-size: 25rpx;
+}
+
+.tytinga .hudhui {
+    color: #888888;
+    font-size: 22rpx;
+}
+
+.tytinga .redhuilv {
+    color: #00b4ff;
+    font-size: 25rpx;
+}
+
+.zanuqadc {
+    font-size: 30rpx;
+    color: #000;
+    width: 100%;
+    text-align: center;
+    display: block;
+    margin-top: 50rpx;
+}

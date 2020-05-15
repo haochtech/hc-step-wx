@@ -1,0 +1,33 @@
+<view class="sports-calendar">
+    <view class="bar">
+        <view bindtap="handleCalendar" class="previous" data-handle="prev">
+            <image src="../../resource/images/handle_calendar.png"></image>
+        </view>
+        <view class="date">{{cur_year||'--'}}年{{cur_month||'--'}}月</view>
+        <view bindtap="handleCalendar" class="next" data-handle="next">
+            <image src="../../resource/images/handle_calendar.png"></image>
+        </view>
+    </view>
+    <view class="week">
+        <view class="week-num" data-idx="{{index}}" wx:for="{{weeks_ch}}" wx:key="{{index}}">{{item}}</view>
+    </view>
+    <view class="days-box">
+        <view class="days">
+            <block wx:for="{{days.length/7}}" wx:for-index="i" wx:key="i">
+                <view class="columns" wx:for="{{days}}" wx:for-index="j" wx:key="j">
+                    <block wx:if="{{j/7==i}}">
+                        <view class="rows" wx:for="{{7}}" wx:for-index="k" wx:key="k">
+                            <view class="cell" wx:if="{{days[j+k].date==null}}">
+                                <text decode="{{true}}">&nbsp;&nbsp;</text>
+                            </view>
+                            <view class="cell" wx:else>
+                                <text class="day">{{days[j+k].date}}</text>
+                                <text class="step-num {{days[j+k].stepNum>=10000?'large':''}}">{{days[j+k].stepNum}}</text>
+                            </view>
+                        </view>
+                    </block>
+                </view>
+            </block>
+        </view>
+    </view>
+</view>

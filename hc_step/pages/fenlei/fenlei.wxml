@@ -1,0 +1,39 @@
+<view class=" classify">
+    <scroll-view class="menu-tab" scrollLeft="{{scrollLeft}}" scrollWithAnimation="true" scrollX="true">
+        <view bindtap="swichNav" class="tab-item {{currentTab==index?'active':''}}" data-current="0" data-id="{{item.id}}" data-index="{{index}}" wx:for="{{sort}}">{{item.advname}}</view>
+    </scroll-view>
+    <swiper autoplay="{{autoplay}}" bindchange="switchTab" circular="true" class="swiper" current="{{currentTab}}" style="height:{{swiperHeight}}rpx">
+        <swiper-item wx:for="{{sort}}">
+            <view class="gift-list">
+                <view class="banner">
+                    <ad class="zuiaj" style="margin-bottom:20rpx;" unitId="{{setaa.adunit5}}" wx:if="{{setaa.adunit5}}"></ad>
+                </view>
+                <navigator class="danhu" data-id="{{item.id}}" data-index="{{index}}" data-paytype="{{item.paytype}}" data-selltype="{{item.selltype}}" hoverClass="none" url="../detail/detail?id={{item.id}}&index=1&paytype={{item.paytype}}&selltype={{item.selltype}}" wx:for="{{item.goodslist}}">
+                    <view class="ware">
+                        <image class="tucda" src="{{item.main_img}}"></image>
+                        <view class="sahus">
+                            <text class="shangf">{{item.goods_name}}</text>
+                            <view class="gfuizhi">
+                                <text class="honghaa" wx:if="{{item.paytype==1}}">原价：{{item.maxrmb}}</text>
+                                <text class="hsudui">剩余{{item.inventory}}件</text>
+                            </view>
+                            <view class="head_one" wx:if="{{item.paytype==0}}">
+                                <image src="../../resource/images/pao.png" wx:if="{{item.selltype!=2}}"></image>
+                                <text wx:if="{{item.selltype!=2}}">{{item.price}}{{setaa.coinname}}</text>
+                                <text wx:if="{{item.selltype==2}}">邀请{{item.minpeople}}个好友免费送</text>
+                            </view>
+                            <view class="head_one" wx:if="{{item.paytype==1}}">
+                                <image src="../../resource/images/pao.png"></image>
+                                <text class="hongf">{{item.price2}}{{setaa.coinname}}+{{item.rmb}}元</text>
+                            </view>
+                        </view>
+                    </view>
+                    <view class="csavdas">
+                        <image src="../../resource/images/avds.png"></image>
+                        <text>{{item.paytype==0?'免费兑换':'立即兑换'}}</text>
+                    </view>
+                </navigator>
+            </view>
+        </swiper-item>
+    </swiper>
+</view>

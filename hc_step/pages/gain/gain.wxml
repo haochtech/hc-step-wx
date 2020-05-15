@@ -1,0 +1,14 @@
+<view class="main">
+    <view class="time">
+    收益记录
+</view>
+    <view class="luhfdu" wx:for="{{goods}}">
+        <text>{{item.title}}</text>
+        <text class="ains">{{item.hbmoney}}</text>
+        <text>{{item.daytime}}</text>
+    </view>
+</view>
+<Icon id="Icon" img="{{iconimh}}" phone="{{phone}}" poc="{{poc}}" txt="{{txttex}}"></Icon>
+<view style="width:100%;">
+    <view class="xsavcad">没有更多数据了</view>
+</view>

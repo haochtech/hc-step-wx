@@ -1,0 +1,35 @@
+<view class="containerBackground">
+    <view class="container_top">
+        <view class="share-view">
+            <text class="shanban_txt">{{zong.time}}</text>
+            <image class="share-image" src="{{url[listIndex]}}"></image>
+            <view class="xia">
+                <image src="{{zong.head_pic}}"></image>
+                <view class="xuahfb">
+                    <text class="nich">{{zong.nick_name}}</text>
+                    <text class="jia">{{zong.text}}</text>
+                </view>
+            </view>
+        </view>
+        <view class="audh">
+            <view class="jiadf">
+                <text>{{bushu}}</text>
+                <text>步</text>
+            </view>
+            <view class="daghdba">
+                <view class="budah">
+                    <text>{{zong.xcx}}</text>
+                    <text>长按识别小程序</text>
+                </view>
+                <image class="cahv" src="{{zong.qrcode}}"></image>
+            </view>
+        </view>
+    </view>
+    <view class="container_bottom">
+        <view bindtap="eventDraw" class="nextPic">下一张</view>
+        <view bindtap="Create" class="saveBtn">保存本地</view>
+        <view class="textDetail next">图中步数为真实运动步数，没有加成</view>
+    </view>
+    <Icon id="Icon" img="{{iconimh}}" phone="{{phone}}" poc="{{poc}}" txt="{{txttex}}"></Icon>
+    <ad class="csadca" style="margin-top:20rpx;" unitId="{{setaa.adunit4}}" wx:if="{{setaa.adunit4}}"></ad>
+</view>

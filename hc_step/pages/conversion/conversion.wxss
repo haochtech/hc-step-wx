@@ -1,0 +1,214 @@
+.rankuif {
+    width: 100%;
+    height: 96rpx;
+    display: flex;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: #fff;
+}
+
+.rankuif text {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-bottom: 2rpx solid #eeeeee;
+    color: #111111;
+    font-size: 30rpx;
+}
+
+.savdsavds {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+.savdsavds_text {
+    font-size: 23rpx;
+    color: #959595;
+}
+
+.rankuif .qiyu {
+    border-bottom: 2rpx solid #ae7cfa;
+    color: #ae7cfa;
+}
+
+.avh {
+    margin-top: 96rpx;
+}
+
+.duihuan,.duihuan_idal {
+    width: 100%;
+    display: flex;
+    height: 105rpx;
+    align-items: center;
+    border-bottom: 2rpx solid #e9e9e9;
+}
+
+.duihuan text {
+    width: 33%;
+    height: 84rpx;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #666666;
+    font-size: 27rpx;
+}
+
+.duihuan_idal text {
+    color: #121212;
+    font-size: 22rpx;
+    width: 33%;
+    height: 84rpx;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.duihuan_idal .timne {
+    color: #888888;
+    font-size: 22rpx;
+}
+
+.sahd {
+    width: 33%;
+    height: 84rpx;
+    border: 2rpx solid #9f64f8;
+    color: #9f64f8;
+    font-size: 22rpx;
+}
+
+.dishi {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.shangoin {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2rpx solid #eee;
+    height: 100rpx;
+    padding: 20rpx;
+    box-sizing: border-box;
+}
+
+.wenj {
+    width: 346rpx;
+    display: flex;
+    flex-direction: column;
+    margin-right: auto;
+    justify-content: space-between;
+    margin-left: 24rpx;
+    height: 80rpx;
+}
+
+.wenj text {
+    color: #b6b6b6;
+    font-size: 24rpx;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 1;
+    overflow: hidden;
+}
+
+.wenj text:first-child {
+    color: #000;
+    font-size: 29rpx;
+}
+
+.dog {
+    color: #000;
+    font-size: 29rpx;
+}
+
+.shnpin {
+    width: 62rpx;
+    height: 62rpx;
+    border-radius: 15rpx;
+    display: flex;
+}
+
+.yixsa {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100rpx;
+    padding: 20rpx;
+    box-sizing: border-box;
+}
+
+.ysai {
+    font-size: 29rpx;
+    color: #959595;
+}
+
+.dia {
+    width: 35rpx;
+    height: 35rpx;
+}
+
+.qigtian {
+    font-size: 25rpx;
+    color: #000;
+    padding: 10rpx 15rpx;
+    border: 2rpx solid #ab44c8;
+    border-radius: 10rpx;
+}
+
+.xsav {
+    width: 100%;
+    height: 20rpx;
+    background: #f4f4f4;
+}
+
+.huanhuanji {
+    height: 100%;
+    width: 33%;
+    display: flex;
+    align-items: center;
+    padding: 8rpx 0;
+    box-sizing: border-box;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.weihua {
+    width: 125rpx;
+    background: #e14538;
+    display: flex;
+    align-items: center;
+    border-radius: 50rpx;
+    justify-content: center;
+    color: #ffffff;
+    height: 44rpx;
+    font-size: 21rpx;
+}
+
+.duihuan_idal .odd {
+    color: #ffa200;
+    font-size: 21rpx;
+    width: 100%;
+    height: auto;
+}
+
+.duihuan_idal .oddtime {
+    width: 100%;
+    color: #888888;
+    height: auto;
+    font-size: 21rpx;
+}
+
+.duihuan_idal .wanhcf {
+    color: #48c301;
+    font-size: 21rpx;
+    height: auto;
+    width: 100%;
+}

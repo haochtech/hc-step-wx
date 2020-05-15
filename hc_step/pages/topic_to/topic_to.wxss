@@ -1,0 +1,6 @@
+@import "../topic/topic.wxss";
+
+.community_img {
+    width: 100%;
+    height: 300rpx;
+}

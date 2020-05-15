@@ -1,0 +1,384 @@
+<view catchtouchmove="{{shouquan==1||follow==1?'dabvsb':''}}" wx:if="{{sh_en==0}}">
+    <view class="montions">
+        <view hidden="{{montions==0}}">
+            <lamp Marquistext="{{notice.notice}}" bindtap="hiuan" hidden="{{npm}}" id="lamp"></lamp>
+        </view>
+        <view class="qiyucsa">
+            <view class="head">
+                <image class="head_img" src="{{newset.longbg}}"></image>
+                <view class="head_one">
+                    <image src="{{newset.coinpic}}"></image>
+                    <text style="color:{{newset.cointextcolor}}">{{zpnghe.money}}</text>
+                </view>
+                <form bindsubmit="submitInhanshui" class="head_two" reportSubmit="true" wx:if="{{setaa.icon&&setaa.sweattext!=''}}">
+                    <button class="kuo" formType="submit" hoverClass="none">
+                        <image src="{{newset.icon}}"></image>
+                        <text style="color:{{newset.sweatcolor}}">{{setaa.sweattext}}</text>
+                    </button>
+                </form>
+            </view>
+            <view class="step">
+                <image class=" beiji" src="../../resource/images/beiji.png" wx:if="{{setaa.indexbg==''}}"></image>
+                <image class=" beiji" src="{{newset.indexbg}}" wx:if="{{newset.indexbg!=''}}"></image>
+                <view bindtap="sing" class="siuin" wx:if="{{setaa.is_qian==1}}">
+                    <image src="{{setaa.signicon}}"></image>
+                    <text style="color:{{setaa.signtextcolor}}">{{setaa.signtext}}</text>
+                </view>
+                <form bindsubmit="submitInreset" class="step_img" reportSubmit="true">
+                    <button class="kuodaa" formType="submit" hoverClass="none">
+                        <image src="../../resource/images/lijdi.png" wx:if="{{newset.indexbutton==''}}"></image>
+                        <image src="{{newset.indexbutton}}" wx:if="{{newset.indexbutton!=''}}"></image>
+                        <view class="step_view">
+                            <text class="stepnumber" style="color:{{newset.centercolor}}">{{step}}</text>
+                            <view class="step_view_xia">
+                                <text style="color:{{newset.centercolor}}">今日步数</text>
+                                <text style="color:{{newset.centercolor}}">每日24点清零</text>
+                            </view>
+                        </view>
+                    </button>
+                </form>
+                <view bindtap="reset" class="qisah">
+                    <text style="color:{{newset.smalltipcolor}}">{{setaa.smalltip}}</text>
+                </view>
+                <view class="tilist" wx:if="{{newset.icon_position==0}}">
+                    <view bindtap="tiaohuan" class="tiaohuan" data-appid="{{item.xcxappid}}" data-jump="{{item.jump}}" data-path="{{item.xcxpath}}" data-tippic="{{item.tippic}}" data-webview="{{item.h5}}" wx:for="{{iconimg}}">
+                        <image src="{{item.thumb}}"></image>
+                        <text style="color:{{item.advnamecolor}}">{{item.advname}}</text>
+                    </view>
+                </view>
+                <button class="yaifd" data-sethong="1" openType="share" style="color:{{setaa.sharetextcolor}}" wx:if="{{shenhe!=0}}">
+                    <text>{{setaa.sharetext}}</text>
+                    <image class="sdav" src="{{setaa.buttonbg}}"></image>
+                </button>
+                <text class="eiyiad" style="color:{{setaa.shareinfocolor}}" wx:if="{{shenhe!=0&&setaa.invitetype==1}}">{{setaa.shareinfo}}</text>
+                <view bindtap="xiaoshi" class="{{tujh[0]?'linuah':'yuf'}}" data-id="{{inviteball[0].id}}" data-index="0" wx:if="{{inviteball[0]}}">
+                    <view class="caca">
+                        <image src="{{setaa.inviteball}}" wx:if="{{setaa.inviteball!=''}}"></image>
+                        <image src="../../resource/images/1000.png" wx:if="{{setaa.inviteball==''}}"></image>
+                        <text style="color:{{setaa.balltextcolor}}">{{inviteball[0].step}}</text>
+                    </view>
+                    <text style="color:{{setaa.balltextcolor}}">点击领取</text>
+                </view>
+                <view bindtap="xiaoshi" class="{{tujh[1]?'linuah_two':'yuf'}}" data-id="{{inviteball[1].id}}" data-index="1" wx:if="{{inviteball[1]}}">
+                    <view class="caca">
+                        <image src="{{setaa.inviteball}}" wx:if="{{setaa.inviteball!=''}}"></image>
+                        <image src="../../resource/images/1000.png" wx:if="{{setaa.inviteball==''}}"></image>
+                        <text style="color:{{setaa.balltextcolor}}">{{inviteball[1].step}}</text>
+                    </view>
+                    <text style="color:{{setaa.balltextcolor}}">点击领取</text>
+                </view>
+                <view bindtap="xiaoshi" class="{{tujh[2]?'linuah_se':'yuf'}}" data-id="{{inviteball[2].id}}" data-index="2" wx:if="{{inviteball[2]}}">
+                    <view class="caca">
+                        <image src="{{setaa.inviteball}}" wx:if="{{setaa.inviteball!=''}}"></image>
+                        <image src="../../resource/images/1000.png" wx:if="{{setaa.inviteball==''}}"></image>
+                        <text style="color:{{setaa.balltextcolor}}">{{inviteball[2].step}}</text>
+                    </view>
+                    <text style="color:{{setaa.balltextcolor}}">点击领取</text>
+                </view>
+                <view bindtap="xiaoshi" class="{{tujh[3]?'linuah_for':'yuf'}}" data-id="{{inviteball[3].id}}" data-index="3" wx:if="{{inviteball[3]}}">
+                    <view class="caca">
+                        <image src="{{setaa.inviteball}}" wx:if="{{setaa.inviteball!=''}}"></image>
+                        <image src="../../resource/images/1000.png" wx:if="{{setaa.inviteball==''}}"></image>
+                        <text style="color:{{setaa.balltextcolor}}">{{inviteball[3].step}}</text>
+                    </view>
+                    <text style="color:{{setaa.balltextcolor}}">点击领取</text>
+                </view>
+                <view bindtap="jia" class="linuah_qitata" data-upbushu="{{upbushu}}" wx:if="{{upbushu!=''}}">
+                    <view class="caca">
+                        <image src="{{setaa.upball}}" wx:if="{{setaa.inviteball!=''}}"></image>
+                        <image src="../../resource/images/1000.png" wx:if="{{setaa.inviteball==''}}"></image>
+                        <text style="color:{{setaa.balltextcolor}}">{{upbushu}}</text>
+                    </view>
+                    <text style="color:{{setaa.balltextcolor}}">点击领取</text>
+                </view>
+                <view bindtap="Guanzhuball2bushu" class="linuah_qitataa" wx:if="{{setaa.is_guanzhujiang==1}}">
+                    <view class="caca">
+                        <image src="{{setaa.inviteball}}" wx:if="{{setaa.inviteball!=''}}"></image>
+                        <image src="../../resource/images/1000.png" wx:if="{{setaa.inviteball==''}}"></image>
+                        <text style="color:{{setaa.balltextcolor}}">{{setaa.guanzhu_step}}</text>
+                    </view>
+                    <text style="color:{{setaa.balltextcolor}}">点击领取</text>
+                </view>
+                <view bindtap="shipinie" class="linuah_lingjiang" wx:if="{{setaa.is_shipinjiang==1}}">
+                    <view class="caca">
+                        <image src="{{setaa.vball}}" wx:if="{{setaa.vball!=''}}"></image>
+                        <image src="../../resource/images/1000.png" wx:if="{{setaa.vball==''}}"></image>
+                    </view>
+                </view>
+            </view>
+        </view>
+        <official-account></official-account>
+        <view class="Newclassification" wx:if="{{newset.icon_position==1}}">
+            <view bindtap="tiaohuan" class="New_view" data-appid="{{item.xcxappid}}" data-jump="{{item.jump}}" data-path="{{item.xcxpath}}" data-tippic="{{item.tippic}}" data-webview="{{item.h5}}" wx:for="{{iconimg}}">
+                <image src="{{item.thumb}}"></image>
+                <text style="color:{{item.advnamecolor}}">{{item.advname}}</text>
+            </view>
+        </view>
+        <view class="New_conte" wx:if="{{newset.is_five==1}}">
+            <view class="New_conte_left">
+                <image bindtap="community" data-appid="{{imgset.left1.appid}}" data-jump="{{imgset.left1.jump}}" data-path="{{imgset.left1.path}}" src="{{imgset.left1.img}}"></image>
+                <image bindtap="community" data-appid="{{imgset.left2.appid}}" data-jump="{{imgset.left2.jump}}" data-path="{{imgset.left2.path}}" src="{{imgset.left2.img}}"></image>
+            </view>
+            <view class="New_conte_right">
+                <image bindtap="community" data-appid="{{imgset.right1.appid}}" data-jump="{{imgset.right1.jump}}" data-path="{{imgset.right1.path}}" src="{{imgset.right1.img}}"></image>
+                <image bindtap="community" data-appid="{{imgset.right2.appid}}" data-jump="{{imgset.right2.jump}}" data-path="{{imgset.right2.path}}" src="{{imgset.right2.img}}"></image>
+                <image bindtap="community" data-appid="{{imgset.right3.appid}}" data-jump="{{imgset.right3.jump}}" data-path="{{imgset.right3.path}}" src="{{imgset.right3.img}}"></image>
+            </view>
+        </view>
+        <view class="yaoqing" wx:if="{{shenhe!=0}}">
+            <text class="yaofhu " wx:if="{{setaa.invitetype==1&&newset.is_kuang==1}}">{{newset.upinfo}}</text>
+            <text class="yaofhu " wx:if="{{setaa.invitetype==2&&newset.is_kuang==1}}">{{newset.hongbaotext}}</text>
+            <view class="yaofhu_qiu" wx:if="{{setaa.invitetype==1&&newset.is_kuang==1}}">
+                <view class="ceshimao" wx:if="{{sonlist[0]==null}}">
+                    <image class="cahvsh" src="{{newset.frame}}"></image>
+                </view>
+                <view class="ceshimao" wx:if="{{sonlist[0]}}">
+                    <image class="cahvsh" src="{{newset.frame}}"></image>
+                    <image class="yaofhu_img cahvsh_img" src="{{sonlist[0].head_pic}}" wx:if="{{sonlist[0]}}"></image>
+                </view>
+                <view class="ceshimao" wx:if="{{sonlist[1]==null}}">
+                    <image class="cahvsh" src="{{newset.frame}}"></image>
+                </view>
+                <view class="ceshimao" wx:if="{{sonlist[1]}}">
+                    <image class="cahvsh" src="{{newset.frame}}"></image>
+                    <image class="yaofhu_img cahvsh_img" src="{{sonlist[1].head_pic}}" wx:if="{{sonlist[1]}}"></image>
+                </view>
+                <view class="ceshimao" wx:if="{{sonlist[2]==null}}">
+                    <image class="cahvsh" src="{{newset.frame}}"></image>
+                </view>
+                <view class="ceshimao" wx:if="{{sonlist[2]}}">
+                    <image class="cahvsh" src="{{newset.frame}}"></image>
+                    <image class="yaofhu_img cahvsh_img" src="{{sonlist[2].head_pic}}" wx:if="{{sonlist[2]}}"></image>
+                </view>
+                <view class="ceshimao" wx:if="{{sonlist[3]==null}}">
+                    <image class="cahvsh" src="{{newset.frame}}"></image>
+                </view>
+                <view class="ceshimao" wx:if="{{sonlist[3]}}">
+                    <image class="cahvsh" src="{{newset.frame}}"></image>
+                    <image class="yaofhu_img cahvsh_img" src="{{sonlist[3].head_pic}}" wx:if="{{sonlist[3]}}"></image>
+                </view>
+                <button class="yaofhu_qiuaua" data-sethong="1" openType="share">
+                    <image class="asvvds" src="../../resource/images/jaivh.png"></image>
+                    <text>{{sonlist.length}}</text>
+                    <image class="cahvsh" src="{{newset.frame}}"></image>
+                </button>
+            </view>
+            <scroll-view scrollX class="solly_lo" style="height:226rpx;" wx:if="{{setaa.invitetype==2&&newset.is_kuang==1}}">
+                <view class="scroll-view-item bc_green" id="green" wx:if="{{item.status==1}}" wx:for="{{Advhongbao}}">
+                    <image src="{{setaa.hongbaobg}}" wx:if="{{setaa.hongbaobg}}"></image>
+                    <image src=" ../../resource/images/bida.png" wx:if="{{setaa.hongbaobg==''}}"></image>
+                    <view class="qiyafya">
+                        <view class="sahu_top">
+                            <text>{{item.hongbaomoney}}{{setaa.coinname}}</text>
+                            <text>助力成功</text>
+                        </view>
+                        <text class="biyaj">币数已加成</text>
+                    </view>
+                </view>
+                <button class="scroll-view-item bc_red" data-sethong="1" id="red" openType="share" wx:if="{{item.status==0}}" wx:for="{{Advhongbao}}">
+                    <image src="{{item.hongbaopic}}"></image>
+                    <text class="diak" style="color:{{item.hongbaonamecolor}}">
+            {{item.hongbaoname}}
+          </text>
+                </button>
+            </scroll-view>
+            <RewardedVideoAd></RewardedVideoAd>
+            <text class="bujia" wx:if="{{setaa.invitetype==1&&newset.is_kuang==1}}">当前步数加成{{setaa.todayup}}%，明日步数加成{{setaa.tomorrow}}%</text>
+            <text bindtap="invite" class="bujiaaf" wx:if="{{sonlist.length>4}}">查看更多好友>></text>
+        </view>
+        <image bindtap="tuihaidaj" class="csavda" src="{{newset.fourhb_mainpic}}" wx:if="{{newset.is_fourhb==1&&newset.fourhb_mainpic!=''}}"></image>
+        <image bindtap="tuihaidaj" class="csavda" src="../../resource/images/a579128553ccccd7e51e9fc86cc05ac.gif" wx:if="{{newset.is_fourhb==1&&newset.fourhb_mainpic==''}}"></image>
+        <swiper autoplay="true" circular="true" class="cagg" indicatorColor="{{colr}}" indicatorDots="{{setaa.adunit!=''||Advimg.length>1?true:false}}" wx:if="{{setaa.adunit||Advimg.length>=1}}">
+            <swiper-item wx:if="{{setaa.adunit}}">
+                <view class="gaodu">
+                    <ad class="csadca" style="margin-bottom:20rpx;" unitId="{{setaa.adunit}}" wx:if="{{setaa.adunit}}"></ad>
+                </view>
+            </swiper-item>
+            <swiper-item wx:for="{{Advimg}}">
+                <view class="gaodu">
+                    <image bindtap="zhuan" data-appid="{{item.xcxappid}}" data-jump="{{item.jump}}" data-path="{{item.xcxpath}}" data-tippic="{{item.tippic}}" data-webview="{{item.h5}}" src="{{item.thumb}}"></image>
+                </view>
+            </swiper-item>
+        </swiper>
+        <view class="listd">
+            <view class="listd_bao" wx:for="{{goods}}">
+                <view class="cunayu">
+                    <text class="xijau">{{item.title}}</text>
+                    <view bindtap="more" class="gd">
+                        <text>更多 </text>
+                        <image src="../../resource/images/shuji.png"></image>
+                    </view>
+                </view>
+                <navigator class="danhu" data-id="{{item.id}}" data-paytype="{{item.paytype}}" data-selltype="{{item.selltype}}" hoverClass="none" url="../detail/detail?id={{item.id}}&index=1&paytype={{item.paytype}}&selltype={{item.selltype}}" wx:for="{{item.goods}}">
+                    <view class="ware">
+                        <image class="tucda" src="{{item.main_img}}"></image>
+                        <view class="sahus">
+                            <text class="shangf">{{item.goods_name}}</text>
+                            <view class="gfuizhi">
+                                <text class="honghaa" wx:if="{{item.paytype==1}}">原价：{{item.maxrmb}}元</text>
+                                <text class="hsudui">剩余{{item.inventory}}件</text>
+                            </view>
+                            <view class="head_one" wx:if="{{item.paytype==0}}">
+                                <image src="../../resource/images/pao.png" wx:if="{{item.selltype<2}}"></image>
+                                <text wx:if="{{item.selltype<2}}">{{item.price}}{{setaa.coinname}}</text>
+                                <text wx:if="{{item.selltype>=2}}">邀请{{item.minpeople}}个好友免费送</text>
+                            </view>
+                            <view class="head_one" wx:if="{{item.paytype==1}}">
+                                <image src="../../resource/images/pao.png"></image>
+                                <text class="hongf">{{item.price2}}{{setaa.coinname}}+{{item.rmb}}元</text>
+                            </view>
+                        </view>
+                    </view>
+                    <view class="csavdas">
+                        <image src="../../resource/images/avds.png"></image>
+                        <text>{{item.paytype==0?'免费兑换':'立即兑换'}}</text>
+                    </view>
+                </navigator>
+            </view>
+        </view>
+        <image bindtap="guanzhu" class="dianji" src="{{setaa.followlogo}}" wx:if="{{setaa.is_follow==1}}"></image>
+        <view catchtouchmove="true" class="huicengt" wx:if="{{hikleree}}">
+            <view class="hontyan">
+                <image bindtap="tanlia_img" class="back_img" src="../../resource/images/back.png"></image>
+                <view class="xview">
+                    <image bindtap="tanlia" data-goods_id="{{tan.tan_goodsid}}" data-paytype="{{tan.paytype}}" data-selltype="{{tan.selltype}}" data-tan_type="{{tan.tan_type}}" src="{{tan.tan_pic}}"></image>
+                </view>
+            </view>
+        </view>
+    </view>
+    <view catchtouchmove="true" class="denglu" wx:if="{{shouquan==1}}">
+        <view class="denglu_ong">
+            <image class="imhyua" src="../../resource/images/deng.png"></image>
+            <text> 使用微信授权登录后才允许操作哦~</text>
+            <button bindgetuserinfo="getUserInfo" class="register" openType="getUserInfo" type="primary">
+        安全登录
+         </button>
+        </view>
+    </view>
+</view>
+<image bindtap="xiao" catchtouchmove="true" class="{{follow==0?'none':'quan'}}" src="{{setaa.followpic}}"></image>
+<button bindtap="xiaotwo" catchtouchmove="true" class="{{followtwo?'none':'quan'}}" hoverClass="none" openType="contact">
+    <image catchtouchmove="true" class="sdavdsa" src="{{tippng}}"></image>
+</button>
+<Icon id="Icon" img="{{iconimh}}" phone="{{phone}}" poc="{{poc}}" txt="{{txttex}}"></Icon>
+<view catchtouchmove="true" class="huiceng" hidden="{{yunti}}">
+    <view class="qtav">
+        <view class="zitu">提醒我明日继续运动</view>
+        <image class="heyuacda" src="../../resource/images/649fc765bb6464374bf6a944248d8e932.png" wx:if="{{runpic==''}}"></image>
+        <image class="heyuacda" src="{{runpic}}" wx:if="{{runpic!=''}}"></image>
+        <form bindsubmit="submitInqueding" class="queding" reportSubmit="true">
+            <button class="kuo" formType="submit" hoverClass="none">
+                <view class="queding" style="margin-top:0;">{{user.is_yy==0?'确定预约':'已预约'}}</view>
+            </button>
+        </form>
+        <image bindtap="guanbil" class="guanf" src="../../resource/images/guan.png"></image>
+    </view>
+</view>
+<view catchtouchmove="true" class="huiceng" hidden="{{sign}}">
+    <view class="qtav">
+        <image class="heyuacda" src="{{setaa.signpic}}"></image>
+        <view class="liaux">
+            <text class="liahf">连续签到{{Issignuser.signtime}}天</text>
+            <view class="cavdsa">
+                <text>+{{Issigntaa.signsharemoney}}</text>
+                <text>{{setaa.coinname}}</text>
+            </view>
+            <button bindtap="fenyia" class="yshuda" data-sethong="1" openType="share" wx:if="{{is_signshare!=1}}">
+                <text>{{Issigntaa.signsharetext}}</text>
+            </button>
+            <view class="yshuda" wx:if="{{is_signshare==1}}">您已经分享过了</view>
+        </view>
+        <image bindtap="guanbilsig" class="guanf" src="../../resource/images/guan.png"></image>
+    </view>
+</view>
+<view catchtouchmove="true" class="huicengt" hidden="{{hikle}}">
+    <view class="hontyan">
+        <image bindtap="hiklenone" class="back_img" src="../../resource/images/back.png"></image>
+        <view bindtap="honsiak" class="xview">
+            <image bindtap="hiklenone" src="{{setaa.openhbpic}}" wx:if="{{setaa.openhbpic!=''}}"></image>
+            <image src="../../resource/images/kai.png" wx:if="{{setaa.openhbpic==''}}"></image>
+            <view class="hontyan_xia">
+                <text class="xiauid">{{setaa.hbtext1}}</text>
+                <text class="fiver">{{setaa.hbtext2}}</text>
+            </view>
+        </view>
+    </view>
+</view>
+<view catchtouchmove="true" class="huicengt" hidden="{{hikletwo}}">
+    <view class="kaihng">
+        <image bindtap="hikletwonone" class="back_img" src="../../resource/images/back.png"></image>
+        <view bindtap="siabvdas" class="xview">
+            <image class="kaihng_img" src="../../resource/images/money.png"></image>
+            <view class="huoaina">
+                <text class="huoain_onetext">获得现金红包 (元)</text>
+                <text class="huoain_twotext">￥{{big_hong.hbmoney}}</text>
+                <text class="huoain_tretext">红包已经存入我的-收益</text>
+            </view>
+            <view class="zaikaisua">再开四个包</view>
+        </view>
+    </view>
+</view>
+<view catchtouchmove="true" class="huicengt" hidden="{{hikletre}}">
+    <view class="kaihng_yu">
+        <image bindtap="hikletrenone" class="back_img" src="../../resource/images/6858eb2ca0f4398359feb37255c85ba.png"></image>
+        <view class="xview">
+            <view class="pink">
+                <text class="sidau">发红包-再开4个</text>
+                <view class="yuiarow">
+                    <text>红包收益：￥{{ken.user.rmb}}</text>
+                    <view bindtap="tiaija" class="yuiarow_ti">提现</view>
+                </view>
+            </view>
+            <view class="ythu">
+                <view class="hngua" wx:for="{{ken.data}}">
+                    <button data-sethong="sethong" openType="share" wx:if="{{item.status==0}}">
+                        <image src="{{setaa.daijiesuo}}" wx:if="{{setaa.daijiesuo!=''}}"></image>
+                        <image src="../../resource/images/small_red_packet_can_not_open.png" wx:if="{{setaa.daijiesuo==''}}"></image>
+                    </button>
+                    <block wx:if="{{item.status==1}}">
+                        <image bindtap="kohidans" src="{{setaa.daikaiqi}}" wx:if="{{setaa.daikaiqi!=''}}"></image>
+                        <image bindtap="kohidans" src="../../resource/images/small_red_packet_to_open.png" wx:if="{{setaa.daikaiqi==''}}"></image>
+                    </block>
+                    <block wx:if="{{item.status==2}}">
+                        <image src="{{setaa.yikaiqi}}" wx:if="{{setaa.yikaiqi!=''}}"></image>
+                        <image src="../../resource/images/small_red_packet_opened.png" wx:if="{{setaa.yikaiqi==''}}"></image>
+                        <view class="diama">{{item.hbmoney}}</view>
+                    </block>
+                </view>
+            </view>
+            <button class="xhua_biyaoue" data-sethong="sethong" openType="share">
+                <text>分享给好友，解锁新红包</text>
+                <text>好友点开红包你俩都能获得红包奖励</text>
+            </button>
+        </view>
+    </view>
+</view>
+<block wx:if="{{sh_en==1}}">
+    <view class="step stepa">
+        <image class=" beiji" src="../../resource/images/beiji.png" wx:if="{{setaa.indexbg==''}}"></image>
+        <image class=" beiji" src="{{setaa.indexbg}}" wx:if="{{setaa.indexbg!=''}}"></image>
+        <view class="step_img">
+            <image src="../../resource/images/lijdi.png" wx:if="{{setaa.indexbutton==''}}"></image>
+            <image src="{{setaa.indexbutton}}" wx:if="{{setaa.indexbutton!=''}}"></image>
+            <view class="step_view">
+                <text class="stepnumber">{{step}}</text>
+                <view class="step_view_xia">
+                    <text>今日步数</text>
+                    <text>每日24点清零</text>
+                </view>
+            </view>
+        </view>
+    </view>
+    <view class="wenxi">
+      温馨提示：如果想马上获取现在的步数，下拉刷新即可
+    </view>
+    <view catchtouchmove="true" class="denglu" wx:if="{{shouquan==1}}">
+        <view class="denglu_ong">
+            <image class="imhyua" src="../../resource/images/deng.png"></image>
+            <text> 使用微信授权登录后才允许操作哦~</text>
+            <button bindgetuserinfo="getUserInfo" class="register" openType="getUserInfo" type="primary">
+        安全登录
+         </button>
+        </view>
+    </view>
+</block>

@@ -1,0 +1,67 @@
+.main {
+    width: 100%;
+    height: 100%;
+}
+
+.main_img {
+    width: 100%;
+    height: 418rpx;
+    display: block;
+}
+
+.main_view {
+    width: 85%;
+    padding: 49rpx;
+    background: #fff;
+    border-radius: 20rpx;
+    height: 670rpx;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    box-sizing: border-box;
+    margin-top: -148rpx;
+    box-shadow: 0 0 20px #cccccc;
+}
+
+.mar_ywi {
+    width: 100%;
+    height: 120rpx;
+    padding: 15rpx 0;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border-bottom: 2rpx solid #eeeeee;
+}
+
+.mar_ywi text {
+    color: #000;
+    font-size: 27rpx;
+    font-weight: 700;
+}
+
+.mar_ywi .yihaujn {
+    color: #666666;
+    font-size: 30rpx;
+    font-weight: normal;
+}
+
+.mar_ywi .yihaujnl {
+    color: #2a97ff;
+    font-size: 29rpx;
+}
+
+.quesau {
+    width: 365rpx;
+    height: 90rpx;
+    border-radius: 50rpx;
+    background: #5890ff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #ffffff;
+    font-size: 31rpx;
+    margin: 0 auto;
+    margin-top: 80rpx;
+}

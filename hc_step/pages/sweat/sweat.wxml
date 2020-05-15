@@ -1,0 +1,75 @@
+<view class="containerBackground" wx:if="{{sh_en==0}}">
+    <view class="top_view"></view>
+    <view class="activeData">
+        <view class="wechat_active_view">
+            <view class="bottom_view"></view>
+            <view class="bottom_view_title">{{sum}}</view>
+            <view class="active_top_title">
+                <view class="line"></view>
+                <view class="wechat_title">微信运动数据</view>
+            </view>
+        </view>
+        <canvas canvasId="lineCanvas" class="canvas" disableScroll="true"></canvas>
+        <view class="wechat_active_bottomview">
+            <view class="bottom_view" style="top:0rpx;"></view>
+            <view class="active_date">
+                <block wx:for="{{tilis}}">
+                    <text class="dateText lengyu" wx:if="{{index==0}}">{{mon}}月{{item}}</text>
+                    <text class="dateText dateTextleft" wx:else>{{item}}</text>
+                </block>
+            </view>
+        </view>
+    </view>
+    <view class="container_top">
+        <Icon id="Icon" img="{{iconimh}}" phone="{{phone}}" poc="{{poc}}" txt="{{txttex}}"></Icon>
+        <view class="share-view">
+            <text class="shanban_txt">{{zong.time}}</text>
+            <image class="share-image" src="{{url[listIndex]}}"></image>
+            <view class="xia">
+                <image src="{{zong.head_pic}}"></image>
+                <view class="xuahfb">
+                    <text class="nich">{{zong.nick_name}}</text>
+                    <text class="jia">{{zong.text}}</text>
+                </view>
+            </view>
+        </view>
+        <view class="audh">
+            <view class="jiadf">
+                <text>{{bushu}}</text>
+                <text>步</text>
+            </view>
+            <view class="daghdba">
+                <view class="budah">
+                    <text>{{zong.xcx}}</text>
+                    <text>长按识别小程序</text>
+                </view>
+                <image class="cahv" src="{{zong.qrcode}}"></image>
+            </view>
+        </view>
+    </view>
+    <view class="container_bottom">
+        <view bindtap="eventDraw" class="nextPic">下一张</view>
+        <view bindtap="Create" class="saveBtn">保存本地</view>
+        <view class="textDetail next">图中步数为真实运动步数，没有加成</view>
+    </view>
+    <button bindgetuserinfo="maskAuthorized" class="authorized-mask" openType="getUserInfo" wx:if="{{showAuthorizedMask}}"></button>
+    <view class="adBackView" wx:if="{{setaa.adunit4}}">
+        <ad id="gg" unitId="{{setaa.adunit4}}" wx:if="{{setaa.adunit4}}"></ad>
+    </view>
+</view>
+<view class="paihang" wx:if="{{sh_en==1}}">
+    <view class="more_battle" style="margin-bottom:51rpx;">
+      步数总排行
+    </view>
+    <view class="paihang_one" wx:for="{{fake}}">
+        <view class="kuai" data-index="{{index}}">{{index}}</view>
+        <view class="paihang_two">
+            <image src="{{item.head_pic}}"></image>
+            <text>{{item.nick_name}}</text>
+        </view>
+        <view class="paihang_tre">
+            <text>{{item.step}}</text>
+            <text>步</text>
+        </view>
+    </view>
+</view>

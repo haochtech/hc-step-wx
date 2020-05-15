@@ -1,0 +1,13 @@
+<view class="main" wx:for="{{Dt_newlist}}">
+    <view bindtap="detailsid" class="list" data-dt_id="{{item.dt_id}}" data-type="{{item.type}}">
+        <image class="thing" src="{{item.head_pic}}"></image>
+        <view class="views_vi">
+            <text class="name">{{item.nick_name}}</text>
+            <view class="views_cent">
+          {{item.text}}
+        </view>
+            <text class="time">{{item.time}}</text>
+        </view>
+        <image class="yuan" src="{{item.img}}" wx:if="{{item.type==3}}"></image>
+    </view>
+</view>

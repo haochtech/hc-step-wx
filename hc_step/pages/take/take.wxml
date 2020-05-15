@@ -1,0 +1,32 @@
+<view class="notake" style="display:none">
+    <image src="../../resource/images/zanja.png"></image>
+    <text>暂无收货地址，立即添加体验更好</text>
+</view>
+<view bindtap="chinge" class="dizhi" data-index="{{index}}" wx:for="{{area}}">
+    <view class="dizhi_yua">
+        <text>{{item.userName}} {{item.telNumber}}</text>
+        <text>{{item.provinceName}} {{item.cityName}} {{item.countyName}} {{item.detailInfo}}</text>
+    </view>
+    <view class="xaimai">
+        <view class="xaimai_ona" wx:if="{{item.chinge}}">
+            <image src="../../resource/images/moah.png"></image>
+            <text>已设为默认</text>
+        </view>
+        <view class="xaimai_ona" wx:else>
+            <text class="kan">设为默认</text>
+        </view>
+        <view class="huna">
+            <view class="buan">
+                <image src="../../resource/images/bian.png"></image>
+                <text>编辑</text>
+            </view>
+            <view class="buan">
+                <image src="../../resource/images/xasa.png"></image>
+                <text>删除</text>
+            </view>
+        </view>
+    </view>
+</view>
+<view bindtap="chaihan" class="puss"> 
+添加地址
+</view>

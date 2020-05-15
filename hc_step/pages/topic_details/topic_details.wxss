@@ -1,0 +1,112 @@
+page {
+    background: #fcfcfc;
+}
+
+@import "../topic/topic.wxss";
+
+.seyou {
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    background: #fff;
+    border-top: 2rpx solid #f8f8f8;
+}
+
+.seyou text {
+    width: 94%;
+    margin: 20rpx auto;
+    height: 60rpx;
+    border-radius: 70rpx;
+    display: block;
+    background: #f6f5f5;
+    color: #999;
+    line-height: 60rpx;
+    padding-left: 30rpx;
+    font-size: 24rpx;
+}
+
+.input_wice {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    z-index: 1;
+    padding: 35rpx;
+    background: #fff;
+    box-sizing: border-box;
+}
+
+.input_wiceimg {
+    width: 50rpx;
+    height: 48rpx;
+    margin-left: auto;
+    display: block;
+}
+
+.input_text {
+    width: 100%;
+    border-radius: 10rpx;
+    height: 350rpx;
+    padding: 15rpx;
+    box-sizing: border-box;
+    color: #000;
+    font-size: 25rpx;
+    background: #f2f2f2;
+}
+
+.input_fa {
+    background-image: linear-gradient(150deg,#b362ff 15px,#20bdff 90px);
+    color: #ffffff;
+    font-size: 24rpx;
+    border-radius: 50rpx;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 147rpx;
+    height: 55rpx;
+    margin-left: auto;
+    margin-top: 40rpx;
+}
+
+.baowu {
+    width: 100%;
+    padding-bottom: 100rpx;
+}
+
+.dianping {
+    width: 100%;
+    display: flex;
+    padding: 20rpx 30rpx;
+    box-sizing: border-box;
+    background: #fff;
+    border-bottom: 2rpx solid #ebebeb;
+}
+
+.dianping image {
+    width: 100rpx;
+    height: 100rpx;
+}
+
+.dianping-view {
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    margin-left: 20rpx;
+}
+
+.dianping_name {
+    color: #131313;
+    font-size: 25rpx;
+}
+
+.dianping_time {
+    color: #868686;
+    font-size: 20rpx;
+    margin-top: 15rpx;
+}
+
+.dianping_p {
+    color: #848484;
+    font-size: 25rpx;
+    margin-top: 15rpx;
+}

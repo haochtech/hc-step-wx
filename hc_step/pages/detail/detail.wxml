@@ -1,0 +1,405 @@
+<import src="../../../wxParse/wxParse.wxml"></import>
+<view class="detail" wx:if="{{selltype==0}}">
+    <swiper autoplay="{{autoplay}}" circular="{{circular}}" class="daxia" interval="{{interval}}">
+        <swiper-item wx:for="{{zhmng.goods_img}}">
+            <image class="slide-image" src="{{item}}"></image>
+        </swiper-item>
+    </swiper>
+    <view class="shpinsha" hidden="{{qity==1}}">
+        <text class="shanui">{{zhmng.goods_name}}</text>
+        <view class="shanui_two">
+            <view class="head_one">
+                <image src="../../resource/images/pao.png"></image>
+                <text class="hongf">{{paytype==0?zhmng.price:zhmng.price2}}{{setaa.coinname}}</text>
+                <text class="hongf" wx:if="{{paytype!=0}}">+{{zhmng.rmb}}元</text>
+                <text class="hongh" wx:if="{{paytype!=0}}">原价：{{zhmng.maxrmb}}元</text>
+            </view>
+            <text class="baoyi">{{zhmng.express}}                              剩余{{zhmng.inventory}}件</text>
+        </view>
+        <view class="feng">
+            <button class="fajurf" openType="share" style="background:#48c301;">
+                <image src="../../resource/images/wei.png"></image>
+                <text>分享好友</text>
+            </button>
+            <button bindtap="pengyiud" class="fajurf" style="background:#a542ff;">
+                <image src="../../resource/images/xia.png" style="width:30rpx;height:30rpx;"></image>
+                <text>生成海报</text>
+            </button>
+        </view>
+    </view>
+    <ad binderror="binderror" class="csadca" style="margin-bottom:20rpx;" unitId="{{setaa.adunit2}}" wx:if="{{setaa.adunit2}}"></ad>
+    <view class="record">
+        <image src="../../resource/images/0180910104039.png"></image>
+        <text>兑换记录</text>
+    </view>
+    <view class="lialist">
+        <view class="lialist_ona" data-index="{{index}}" forIndex="{{index}}" wx:if="{{index<tiaotwo}}" wx:for="{{zhmnglist}}">
+            <image class="lialist_onaing" src="{{item.head_pic}}"></image>
+            <text class="yuidaj">{{item.nick_name}}</text>
+            <text class="csaca">{{item.time}}</text>
+        </view>
+        <view bindtap="gaotwo" class="diana" wx:if="{{tiaotwo<zhmnglist.length}}">加载更多</view>
+    </view>
+    <view class="wxParse">
+        <template is="wxParse" data="{{wxParseData:article.nodes}}"></template>
+    </view>
+    <view class="yuan">
+        <view bindtap="fanhui" class="tiancda">
+            <image src="../../resource/images/shuay.png"></image>
+            <text>首页</text>
+        </view>
+        <view class="dibu">
+            <text bindtap="duihu" data-state="0" wx:if="{{paytype==1}}">原价购买</text>
+            <text bindtap="dui" class="yand" data-state="1">马上兑换</text>
+        </view>
+    </view>
+    <view class="weixiaof" wx:if="{{bnian==0}}">
+        <view catchtouchmove="true" class="weixiaof_yui">
+            <image src="../../resource/images/yah.png"></image>
+            <image bindtap="dianguji" class="gunji" src="../../resource/images/guji.png"></image>
+            <text class="yunfoa">{{setaa.coinname}}不足无法兑换</text>
+            <button class="casvsa" openType="share">
+                <image src="../../resource/images/we.png"></image>
+                <text>{{setaa.coinname}}不足，快去邀请好友得步数吧</text>
+            </button>
+        </view>
+    </view>
+</view>
+<view class="cancel" wx:if="{{selltype==1}}">
+    <swiper autoplay="{{autoplay}}" circular="{{circular}}" class="daxia_two" interval="{{interval}}">
+        <swiper-item wx:for="{{zhmng.goods_img}}">
+            <image class="slide-image" src="{{item}}"></image>
+        </swiper-item>
+    </swiper>
+    <view class="shpinsha">
+        <text class="shanui">{{zhmng.goods_name}}</text>
+        <view class="shanui_two">
+            <view class="head_one">
+                <image src="../../resource/images/pao.png"></image>
+                <text class="hongf">{{paytype==0?zhmng.price:zhmng.price2}}{{setaa.coinname}}</text>
+                <text class="hongf" wx:if="{{paytype!=0}}">+{{zhmng.rmb}}元</text>
+                <text class="hongh" wx:if="{{paytype!=0}}">原价：{{zhmng.maxrmb}}元</text>
+            </view>
+            <text class="baoyi">{{zhmng.express}}                              剩余{{zhmng.inventory}}件</text>
+        </view>
+        <view class="feng">
+            <button class="fajurf" openType="share" style="background:#48c301;">
+                <image src="../../resource/images/wei.png"></image>
+                <text>分享好友</text>
+            </button>
+            <button bindtap="pengyiud" class="fajurf" style="background:#a542ff;">
+                <image src="../../resource/images/xia.png" style="width:30rpx;height:30rpx;"></image>
+                <text>生成海报</text>
+            </button>
+        </view>
+    </view>
+    <ad binderror="binderror" class="csadca" style="margin-bottom:20rpx;" unitId="{{setaa.adunit2}}" wx:if="{{setaa.adunit2}}"></ad>
+    <view class="hidzhia">
+        <image bindtap="openLocation" class="hidzhia_img" data-latitude="{{zhmng.lat}}" data-longitude="{{zhmng.lng}}" src="../../resource/images/dz.png"></image>
+        <view bindtap="openLocation" class="ahnybu" data-latitude="{{zhmng.lat}}" data-longitude="{{zhmng.lng}}">
+            <text>{{zhmng.sheng}}{{zhmng.shi}}{{zhmng.qu}}</text>
+            <text>{{zhmng.address}}</text>
+        </view>
+        <view bindtap="tel" class="bahimf">
+            <image src="../../resource/images/plone.png"></image>
+        </view>
+    </view>
+    <view class="yuing"></view>
+    <view class="yingye">营业时间：{{zhmng.starttime}}至{{zhmng.endtime}}</view>
+    <view class="yuing"></view>
+    <view class="diana" style="border-bottom:2rpx solid #eeeeee;">兑换记录</view>
+    <view class="lialist">
+        <view class="lialist_ona" data-index="{{index}}" forIndex="{{index}}" wx:if="{{index<tiaotwo}}" wx:for="{{zhmnglist}}">
+            <image class="lialist_onaing" src="{{item.head_pic}}"></image>
+            <text class="yuidaj">{{item.nick_name}}</text>
+            <text class="csaca">{{item.time}}</text>
+        </view>
+        <view bindtap="gaotwo" class="diana" wx:if="{{tiaotwo<zhmnglist.length}}">加载更多</view>
+    </view>
+    <view class="wxParse">
+        <template is="wxParse" data="{{wxParseData:article.nodes}}"></template>
+    </view>
+    <view class="yuan">
+        <view bindtap="fanhui" class="tiancda">
+            <image src="../../resource/images/shuay.png"></image>
+            <text>首页</text>
+        </view>
+        <view class="dibu">
+            <text bindtap="yuanhuuji" data-state="0" wx:if="{{paytype==1}}">原价购买</text>
+            <text bindtap="huuji" class="yand" data-state="1">马上兑换</text>
+        </view>
+    </view>
+    <view class="hugfia" hidden="{{hezi}}">
+        <view class="erawire">
+            <view class="daintyu">
+                <image class="dianjdfpng" src="{{dianpi.logo}}"></image>
+                <text class="sahn_text">{{dianpi.shopname}}</text>
+                <text class="sahn_texwt">兑换成功</text>
+                <image class="sahn_img" src="{{dianpi.url}}"></image>
+            </view>
+            <image bindtap="guantwo" class="uoji" src="../../resource/images/guasn.png"></image>
+            <view class="hyma">核销码已存入您的个人中心卡券中，到店请出示</view>
+        </view>
+    </view>
+    <view class="weixiaof" wx:if="{{bnian==0}}">
+        <view catchtouchmove="true" class="weixiaof_yui">
+            <image src="../../resource/images/yah.png"></image>
+            <image bindtap="dianguji" class="gunji" src="../../resource/images/guji.png"></image>
+            <text class="yunfoa">{{setaa.coinname}}不足无法兑换</text>
+            <button class="casvsa" openType="share">
+                <image src="../../resource/images/we.png"></image>
+                <text>{{setaa.coinname}}不足，快去邀请好友得步数吧</text>
+            </button>
+        </view>
+    </view>
+</view>
+<view class="detail" wx:if="{{selltype==2}}">
+    <swiper autoplay="{{autoplay}}" circular="{{circular}}" class="daxia" interval="{{interval}}">
+        <swiper-item wx:for="{{zhmng.goods_img}}">
+            <image class="slide-image" src="{{item}}"></image>
+        </swiper-item>
+    </swiper>
+    <view class="shpinsha" hidden="{{qity==1}}" style="display:flex;flex-direction:row;flex-direction: column;">
+        <text class="shanui">{{zhmng.goods_name}}</text>
+        <view class="shanui_two">
+            <text class="baoyi">{{zhmng.express}}                              剩余{{zhmng.inventory}}件</text>
+        </view>
+        <view class="feng">
+            <button class="fajurf" openType="share" style="background:#48c301;">
+                <image src="../../resource/images/wei.png"></image>
+                <text>分享好友</text>
+            </button>
+            <button bindtap="pengyiud" class="fajurf" style="background:#a542ff;">
+                <image src="../../resource/images/xia.png" style="width:30rpx;height:30rpx;"></image>
+                <text>生成海报</text>
+            </button>
+        </view>
+    </view>
+    <ad binderror="binderror" class="csadca" style="margin-bottom:20rpx;" unitId="{{setaa.adunit2}}" wx:if="{{setaa.adunit2}}"></ad>
+    <view class="yuiodsa">
+        <view class="yuiodsa_seven">
+            <text>邀请</text>
+            <text class="sve">{{zhmng.minpeople}}</text>
+            <text>个好友即可兑换</text>
+        </view>
+        <text class="needs">好友需为新用户</text>
+        <view class="yrenshu">
+            <button class="yrenshu_img" hoverClass="none" openType="share" wx:for="{{tny}}">
+                <image src="../../resource/images/wen.png" wx:if="{{item.head_pic==''||item.head_pic==undefind}}"></image>
+                <text wx:if="{{item.nick_name==''||item.nick_name==undefind}}">待邀请</text>
+                <image src="{{item.head_pic}}" wx:if="{{item.head_pic}}"></image>
+                <text wx:if="{{item.nick_name}}">{{item.nick_name}}</text>
+            </button>
+        </view>
+    </view>
+    <view class="record">
+        <image src="../../resource/images/0180910104039.png"></image>
+        <text>兑换记录</text>
+    </view>
+    <view class="lialist">
+        <view class="lialist_ona" data-index="{{index}}" forIndex="{{index}}" wx:if="{{index<tiaotwo}}" wx:for="{{zhmnglist}}">
+            <image class="lialist_onaing" src="{{item.head_pic}}"></image>
+            <text class="yuidaj">{{item.nick_name}}</text>
+            <text class="csaca">{{item.time}}</text>
+        </view>
+        <view bindtap="gaotwo" class="diana" wx:if="{{tiaotwo<zhmnglist.length}}">加载更多</view>
+    </view>
+    <view class="wxParse">
+        <template is="wxParse" data="{{wxParseData:article.nodes}}"></template>
+    </view>
+    <view class="yuan">
+        <view bindtap="fanhui" class="tiancda">
+            <image src="../../resource/images/shuay.png"></image>
+            <text>首页</text>
+        </view>
+        <view class="dibu">
+            <view bindtap="Createpeoplegoods" class="fuij" wx:if="{{zhmng.is_duihuan==1}}">
+                <image src="../../resource/images/0181008111258.png"></image>
+                <view class="imview">立即兑换</view>
+            </view>
+            <button class="fuij" hoverClass="none" openType="share" wx:if="{{zhmng.is_duihuan==0}}">
+                <image src="../../resource/images/0181008111258.png"></image>
+                <view class="imview">邀请{{zhmng.minpeople}}个好友即可免费兑换</view>
+            </button>
+        </view>
+    </view>
+    <view class="weixiaof" wx:if="{{bnian==0}}">
+        <view catchtouchmove="true" class="weixiaof_yui">
+            <image src="../../resource/images/yah.png"></image>
+            <image bindtap="dianguji" class="gunji" src="../../resource/images/guji.png"></image>
+            <text class="yunfoa">{{setaa.coinname}}不足无法兑换</text>
+            <button class="casvsa" openType="share">
+                <image src="../../resource/images/we.png"></image>
+                <text>{{setaa.coinname}}不足，快去邀请好友得步数吧</text>
+            </button>
+        </view>
+    </view>
+</view>
+<view class="cancel" wx:if="{{selltype==3}}">
+    <swiper autoplay="{{autoplay}}" circular="{{circular}}" class="daxia_two" interval="{{interval}}">
+        <swiper-item wx:for="{{zhmng.goods_img}}">
+            <image class="slide-image" src="{{item}}"></image>
+        </swiper-item>
+    </swiper>
+    <view class="shpinsha">
+        <text class="shanui">{{zhmng.goods_name}}</text>
+        <view class="shanui_two">
+            <text class="baoyi">{{zhmng.express}}                              剩余{{zhmng.inventory}}件</text>
+        </view>
+        <view class="feng">
+            <button class="fajurf" openType="share" style="background:#48c301;">
+                <image src="../../resource/images/wei.png"></image>
+                <text>分享好友</text>
+            </button>
+            <button bindtap="pengyiud" class="fajurf" style="background:#a542ff;">
+                <image src="../../resource/images/xia.png" style="width:30rpx;height:30rpx;"></image>
+                <text>生成海报</text>
+            </button>
+        </view>
+    </view>
+    <ad binderror="binderror" class="csadca" style="margin-bottom:20rpx;" unitId="{{setaa.adunit2}}" wx:if="{{setaa.adunit2}}"></ad>
+    <view class="hidzhia">
+        <image bindtap="openLocation" class="hidzhia_img" data-latitude="{{zhmng.lat}}" data-longitude="{{zhmng.lng}}" src="../../resource/images/dz.png"></image>
+        <view bindtap="openLocation" class="ahnybu" data-latitude="{{zhmng.lat}}" data-longitude="{{zhmng.lng}}">
+            <text>{{zhmng.sheng}}{{zhmng.shi}}{{zhmng.qu}}</text>
+            <text>{{zhmng.address}}</text>
+        </view>
+        <view bindtap="tel" class="bahimf">
+            <image src="../../resource/images/plone.png"></image>
+        </view>
+    </view>
+    <view class="yuing"></view>
+    <view class="yingye">营业时间：{{zhmng.starttime}}至{{zhmng.endtime}}</view>
+    <view class="yuing"></view>
+    <view class="yuiodsa">
+        <view class="yuiodsa_seven">
+            <text>邀请</text>
+            <text class="sve">{{zhmng.minpeople}}</text>
+            <text>个好友即可兑换</text>
+        </view>
+        <text class="needs">好友需为新用户</text>
+        <view class="yrenshu">
+            <button class="yrenshu_img" hoverClass="none" openType="share" wx:for="{{tny}}">
+                <image src="../../resource/images/wen.png" wx:if="{{item.head_pic==''||item.head_pic==undefind}}"></image>
+                <text wx:if="{{item.nick_name==''||item.nick_name==undefind}}">待邀请</text>
+                <image src="{{item.head_pic}}" wx:if="{{item.head_pic}}"></image>
+                <text wx:if="{{item.nick_name}}">{{item.nick_name}}</text>
+            </button>
+        </view>
+    </view>
+    <view class="diana" style="border-bottom:2rpx solid #eeeeee;">兑换记录</view>
+    <view class="lialist">
+        <view class="lialist_ona" data-index="{{index}}" forIndex="{{index}}" wx:if="{{index<tiaotwo}}" wx:for="{{zhmnglist}}">
+            <image class="lialist_onaing" src="{{item.head_pic}}"></image>
+            <text class="yuidaj">{{item.nick_name}}</text>
+            <text class="csaca">{{item.time}}</text>
+        </view>
+        <view bindtap="gaotwo" class="diana" wx:if="{{tiaotwo<zhmnglist.length}}">加载更多</view>
+    </view>
+    <view class="wxParse">
+        <template is="wxParse" data="{{wxParseData:article.nodes}}"></template>
+    </view>
+    <view class="yuan">
+        <view bindtap="fanhui" class="tiancda">
+            <image src="../../resource/images/shuay.png"></image>
+            <text>首页</text>
+        </view>
+        <view class="dibu">
+            <view bindtap="Createhexiao" class="fuij" wx:if="{{zhmng.is_duihuan==1}}">
+                <image src="../../resource/images/0181008111258.png"></image>
+                <view class="imview">立即兑换</view>
+            </view>
+            <button class="fuij" hoverClass="none" openType="share" wx:if="{{zhmng.is_duihuan==0}}">
+                <image src="../../resource/images/0181008111258.png"></image>
+                <view class="imview">邀请{{zhmng.minpeople}}个好友即可免费兑换</view>
+            </button>
+        </view>
+    </view>
+    <view class="hugfia" hidden="{{hezi}}">
+        <view class="erawire">
+            <view class="daintyu">
+                <image class="dianjdfpng" src="{{dianpi.logo}}"></image>
+                <text class="sahn_text">{{dianpi.shopname}}</text>
+                <text class="sahn_texwt">兑换成功</text>
+                <image class="sahn_img" src="{{dianpi.url}}"></image>
+            </view>
+            <image bindtap="guantwo" class="uoji" src="../../resource/images/guasn.png"></image>
+            <view class="hyma">核销码已存入您的个人中心卡券中，到店请出示</view>
+        </view>
+    </view>
+    <view class="weixiaof" wx:if="{{bnian==0}}">
+        <view catchtouchmove="true" class="weixiaof_yui">
+            <image src="../../resource/images/yah.png"></image>
+            <image bindtap="dianguji" class="gunji" src="../../resource/images/guji.png"></image>
+            <text class="yunfoa">{{setaa.coinname}}不足无法兑换</text>
+            <button class="casvsa" openType="share">
+                <image src="../../resource/images/we.png"></image>
+                <text>{{setaa.coinname}}不足，快去邀请好友得步数吧</text>
+            </button>
+        </view>
+    </view>
+</view>
+<view catchtouchmove="true" class="denglu" wx:if="{{shouquan==1}}">
+    <view class="denglu_ong">
+        <image class="denglu_img" src="../../resource/images/ubn.png" wx:if="{{setaa.loginpic==''}}"></image>
+        <image class="denglu_img" src="{{setaa.loginpic}}" wx:if="{{setaa.loginpic!=''}}"></image>
+        <view class="liange">
+            <text bindtap="zai">再想想</text>
+            <button bindgetuserinfo="getUserInfo" class="register" openType="getUserInfo">
+        好，授权吧
+      </button>
+        </view>
+    </view>
+</view>
+<Icon id="Icon" img="{{iconimh}}" phone="{{phone}}" poc="{{poc}}" txt="{{txttex}}"></Icon>
+<view class="denglu" style="display:flex;align-items:center;justify-content:center;" wx:if="{{hol}}">
+    <view class="denglu_view">
+        <image bindtap="yuaj" class="denglu_imgh" src="../../resource/images/guasn.png"></image>
+        <view class="csajhfia">红包余额
+      <text>￥{{zhuuser.rmb}}元</text>
+        </view>
+        <view class="jazijia">
+            <text>红包{{zhuuser.keyong}}元</text>
+            <view class="body-view">
+                <switch checked bindchange="switch1Change"></switch>
+            </view>
+        </view>
+        <view class="ttiao"></view>
+        <view class="cacddvdgb">
+            <text>优惠后</text>
+            <text>小计:￥{{quanhou}}元</text>
+        </view>
+        <view bindtap="duihuasatxsaca" class="zhaivn" data-state="{{0}}" wx:if="{{selltype==0}}">支付</view>
+        <view bindtap="reatehexi" class="zhaivn" data-state="{{0}}" wx:if="{{selltype==1}}">支付</view>
+    </view>
+</view>
+<view catchtouchmove="true" class="poster" hidden="{{!keephold}}">
+    <image bindtap="fan_imga" class="poster_img" src="../../resource/images/guan.png"></image>
+    <canvas canvasId="myCanvas" class="myCanvas" style="width: 300px; height:600px;position: absolute;top:99900px;"></canvas>
+    <view class="canvas">
+        <view class="canvas_img">
+            <text class="canvas_img_o">{{zhmng.goods_name}}</text>
+            <text class="canvas_img_t">{{namepaytype}}</text>
+            <text class="canvas_img_s" wx:if="{{selltype!=2&paytype!=0}}">原价：{{zhmng.maxrmb}}元</text>
+            <text class="canvas_img_s" wx:else></text>
+            <image class="canvas_img_f" src="{{zhmng.main_img}}"></image>
+            <view class="canvas_img_e">
+                <image src="{{dataurll}}"></image>
+                <view class="pidn">
+                    <text>{{setaa.xcx}}</text>
+                    <text>微信内长按识别小程序码</text>
+                </view>
+            </view>
+        </view>
+        <view class="cover-view">
+            <button class="but" openType="share">
+                <image src="../../resource/images/f.png"></image>
+                <text>直接分享</text>
+            </button>
+            <button bindtap="savaImageToPhoto" class="but but_re">
+                <image src="../../resource/images/xz.png"></image>
+                <text>保存海报</text>
+            </button>
+        </view>
+    </view>
+</view>

@@ -1,0 +1,175 @@
+page {
+    width: 100%;
+    height: 100%;
+    background: #f6f6f6;
+}
+
+.main {
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+.record_toi {
+    width: 100%;
+    height: 280rpx;
+    background: linear-gradient(#a004ff,#6a78ff);
+}
+
+.nihdid {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+    margin: 0 auto;
+    padding-top: 44rpx;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
+.nihdid text {
+    color: #ffffff;
+    font-size: 66rpx;
+    margin-top: 20rpx;
+}
+
+.nihdid text:first-child {
+    color: #ffffff;
+    font-size: 26rpx;
+    margin-top: 0;
+}
+
+.shuaj {
+    width: 158rpx;
+    height: 60rpx;
+    border-top-left-radius: 50rpx;
+    border-bottom-left-radius: 50rpx;
+    background: #8600d6;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #f8f8f8;
+    font-size: 25rpx;
+    position: absolute;
+    right: 0;
+    top: 80rpx;
+    z-index: 12;
+}
+
+.duihujilu {
+    width: 90%;
+    border-radius: 10rpx;
+    margin: 0 auto;
+    padding: 48rpx 60rpx 60rpx 60rpx;
+    background: #fff;
+    box-shadow: #e9e9e9 0px 0px 5px;
+    margin-top: -62rpx;
+    box-sizing: border-box;
+    z-index: 1;
+    flex-direction: column;
+    display: flex;
+    justify-content: space-between;
+}
+
+.tiuja {
+    color: #333333;
+    font-size: 30rpx;
+}
+
+.uanf {
+    width: 100%;
+    height: 80rpx;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.unfa_fu {
+    color: #333333;
+    font-size: 50rpx;
+}
+
+.uanf input {
+    width: 78%;
+    margin-left: 16rpx;
+    color: #b9b9b9;
+    font-size: 37rpx;
+}
+
+.ahudbn {
+    width: 83rpx;
+    height: 43rpx;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50rpx;
+    border: 2rpx solid #a259cf;
+    color: #951cff;
+    font-size: 22rpx;
+}
+
+.tuma {
+    width: 100%;
+    height: 85rpx;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50rpx;
+    color: #9d0bff;
+    font-size: 30rpx;
+    border: 2rpx solid #9d0bff;
+    margin-top: 52rpx;
+}
+
+.button-hover {
+    background-color: none;
+}
+
+button {
+    padding: 0;
+    margin: 0;
+    border-radius: 0;
+    background: none;
+    line-height: normal;
+}
+
+button::after {
+    content: none;
+}
+
+.isdasa {
+    width: 100%;
+    height: 85rpx;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50rpx;
+    color: #fff;
+    font-size: 30rpx;
+    margin-top: 52rpx;
+    background: linear-gradient(#a200ff,#6484ff);
+}
+
+.Presentation {
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    padding: 0 18rpx;
+    box-sizing: border-box;
+    flex-direction: column;
+}
+
+.titlia {
+    color: #666666;
+    font-size: 25rpx;
+    margin-top: 33rpx;
+    margin-bottom: 15rpx;
+}
+
+.Presentation text {
+    color: #888888;
+    font-size: 22rpx;
+}

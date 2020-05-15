@@ -1,0 +1,6 @@
+{
+    "navigationBarTitleText": "收益记录",
+    "usingComponents": {
+        "Icon": "../Icon/Icon"
+    }
+}

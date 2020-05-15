@@ -1,0 +1,38 @@
+<import src="../topic/topic_m"></import>
+<view class="bigBox">
+    <view>
+        <view class="img">
+            <view style="overflow:hidden">
+                <image class="big_head_portrait" mode="aspectFill" src="{{info.head_pic}}" style="display:block;"></image>
+            </view>
+            <image class="xsaaacdas" src="{{info.head_pic}}"></image>
+            <view class="mask"></view>
+            <text class="nick_name">{{info.nick_name}}</text>
+            <text class="outid">ID:{{info.id}}</text>
+            <view class="partake">
+                <button data-zhuye="zhuye" openType="share">分享</button>
+                <text bindtap="follwith" data-my_id="{{my_id}}" data-status="{{info.status}}" data-target_id="{{target_id}}" wx:if="{{target_id!=my_id}}">{{info.status==0?'关注':'取消关注'}}</text>
+            </view>
+        </view>
+        <view class="interven">
+            <view class="interven_xinsi interven_bod">
+                <text>{{info.guanzhu}}</text>
+                <text>关注</text>
+            </view>
+            <view class="interven_xinsi interven_bod">
+                <text>{{info.tie}}</text>
+                <text>发帖</text>
+            </view>
+            <view class="interven_xinsi interven_bod">
+                <text>{{info.zan}}</text>
+                <text>获赞</text>
+            </view>
+            <view class="interven_xinsi">
+                <text>{{info.fans}}</text>
+                <text>粉丝</text>
+            </view>
+        </view>
+    </view>
+    <template is="topic_m" data="{{Dtlist:Dtlist,user_id:user_id,target_id:target_id,my_id:my_id}}"></template>
+    <view class="noMore" hidden="{{Dtlist.length>=1}}" style="">没有更多内容了</view>
+</view>

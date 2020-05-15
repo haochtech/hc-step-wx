@@ -1,0 +1,14 @@
+<Icon id="Icon" img="{{iconimh}}" phone="{{phone}}" poc="{{poc}}" txt="{{txttex}}"></Icon>
+<view class="paihang_one" wx:for="{{list}}">
+    <view class="kuai" data-index="{{index}}">{{index+1}}</view>
+    <view class="paihang_two">
+        <image src="{{item.head_pic}}"></image>
+        <text>{{item.nick_name}}</text>
+    </view>
+    <view class="paihang_tre" wx:if="{{invitetype==1}}">
+        <text>{{item.step}}</text>
+        <text>步</text>
+    </view>
+    <text class="uyigfj">{{item.invite_time}}</text>
+</view>
+<text class="zanuqadc" wx:if="{{list==''||list==undefind}}">暂无记录</text>

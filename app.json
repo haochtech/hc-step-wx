@@ -1,0 +1,107 @@
+{
+  "pages": [
+    "hc_step/pages/index/index",
+    "hc_step/pages/detail/detail",
+    "hc_step/pages/myorders/myorders",
+    "hc_step/pages/news/news",
+    "hc_step/pages/dope/dope",
+    "hc_step/pages/dopeone/dopeone",
+    "hc_step/pages/community/community",
+    "hc_step/pages/reward/reward",
+    "hc_step/pages/taketo/taketo",
+    "hc_step/pages/take/take",
+    "hc_step/pages/topic_details/topic_details",
+    "hc_step/pages/personalhomepage/personalhomepage",
+    "hc_step/pages/release/release",
+    "hc_step/pages/topic_to/topic_to",
+    "hc_step/pages/topic/topic",
+    "hc_step/pages/check/check",
+    "hc_step/pages/xmadPage/sell",
+    "hc_step/pages/xmadPage/collect",
+    "hc_step/pages/xmadPage/copyInfo",
+    "hc_step/pages/sportsCalendar/sportsCalendar",
+    "hc_step/pages/tu/tu",
+    "hc_step/pages/activityvip/activityvip",
+    "hc_step/pages/Defiance/Defiance",
+    "hc_step/pages/guang/guang",
+    "hc_step/pages/room/room",
+    "hc_step/pages/hua/hua",
+    "hc_step/pages/still/still",
+    "hc_step/pages/rich/rich",
+    "hc_step/pages/white/white",
+    "hc_step/pages/detaikf/detaikf",
+    "hc_step/pages/inventer/inventer",
+    "hc_step/pages/shiywe/shiywe",
+    "hc_step/pages/fenlei/fenlei",
+    "hc_step/pages/activity/activity",
+    "hc_step/pages/chou/chou",
+    "hc_step/pages/challenge/challenge",
+    "hc_step/pages/dialog/dialog",
+    "hc_step/pages/lamp/lamp",
+    "hc_step/pages/yquda/yquda",
+    "hc_step/pages/pao/pao",
+    "hc_step/pages/gain/gain",
+    "hc_step/pages/income/income",
+    "hc_step/pages/Icon/Icon",
+    "hc_step/pages/sweat/sweat",
+    "hc_step/pages/codex/codex",
+    "hc_step/pages/trouble/trouble",
+    "hc_step/pages/accredit/accredit",
+    "hc_step/pages/Sweatdiary/Sweatdiary",
+    "hc_step/pages/register/register",
+    "hc_step/pages/inviter/inviter",
+    "hc_step/pages/conversion/conversion",
+    "hc_step/pages/record/record",
+    "hc_step/pages/soso/soso"
+  ],
+  "window": {
+    "navigationBarTextStyle": "white",
+    "navigationBarTitleText": "走四方"
+  },
+  "tabBar": {
+    "selectedColor": "#9f64f8",
+    "list": [
+      {
+        "pagePath": "hc_step/pages/index/index",
+        "text": "首页",
+        "iconPath": "hc_step/resource/images/11.png",
+        "selectedIconPath": "hc_step/resource/images/1.png"
+      },
+      {
+        "pagePath": "hc_step/pages/activityvip/activityvip",
+        "text": "活动",
+        "iconPath": "hc_step/resource/images/activity.png",
+        "selectedIconPath": "hc_step/resource/images/activityd.png"
+      },
+      {
+        "pagePath": "hc_step/pages/sweat/sweat",
+        "text": "汗水日记",
+        "iconPath": "hc_step/resource/images/14.png",
+        "selectedIconPath": "hc_step/resource/images/15.png"
+      },
+      {
+        "pagePath": "hc_step/pages/record/record",
+        "text": "我的",
+        "iconPath": "hc_step/resource/images/33.png",
+        "selectedIconPath": "hc_step/resource/images/3.png"
+      }
+    ]
+  },
+  "subPackages": [
+    {
+      "root": "hc_step/game",
+      "pages": [
+        "pages/mark/mark",
+        "pages/gameinvite/gameinvite",
+        "pages/gamet/gamet"
+      ]
+    }
+  ],
+  "navigateToMiniProgramAppIdList": [
+    "wxd679da90a677540c",
+    "wxe002b5979e78019c",
+    "wx489c3da8375e7596",
+    "wxf72cbbcbd7f39f29"
+  ],
+  "sitemapLocation": "sitemap.json"
+}

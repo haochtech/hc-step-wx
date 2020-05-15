@@ -1,0 +1,24 @@
+<view class="copy-container">
+    <view wx:for="{{dataJson}}" wx:for-item="it" wx:key="index">
+        <view wx:if="{{it.type=='banner'}}">
+            <swiper autoplay="{{autoplay}}" circular="{{circular}}" class="swiper-container" duration="{{duration}}" indicatorDots="{{indicatorDots}}" interval="{{interval}}">
+                <swiper-item wx:for="{{it.data}}" wx:for-index="index1" wx:for-item="url" wx:key="index1">
+                    <image src="{{url}}" style="width: 100%; height: 100%"></image>
+                </swiper-item>
+            </swiper>
+        </view>
+        <view class="image-container" wx:if="{{it.type=='imgs'}}">
+            <image mode="widthFix" src="{{it.imgUrl}}" style="width: 100%"></image>
+        </view>
+        <view class="form-container" wx:if="{{it.type=='form'}}">
+            <view class="detail-container">
+                <text class="btn1">{{it.data.config.orderInfo.operation}}</text>
+                <view class="middle-text">
+                    <text class="btn2">{{it.data.config.orderInfo.wechatTip}}</text>
+                    <text class="btn3">微信号: {{it.data.config.orderInfo.wechatCount}}</text>
+                </view>
+                <text bindtap="copyPublicAddress" class="btn4">{{it.data.config.orderInfo.copy}}</text>
+            </view>
+        </view>
+    </view>
+</view>

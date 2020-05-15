@@ -1,0 +1,85 @@
+<view class="zongz">
+    <view class="herad">
+        <image class="herad_img" src="{{setaa.applypic}}" wx:if="{{setaa.applypic}}"></image>
+        <view class="tif">
+            <text>【{{Activitylist.tomorrow.day}}/周{{Activitylist.tomorrow.week}}】{{Activitylist.tomorrow.step}}步挑战活动</text>
+            <text>挑战时间：{{Activitylist.tomorrow.day}}0:00~23:59</text>
+        </view>
+        <Icon id="Icon" img="{{iconimh}}" phone="{{phone}}" poc="{{poc}}" txt="{{txttex}}"></Icon>
+    </view>
+    <view class="yuikh">
+        <view class="yuikh_ijh">
+            <text class="buyuhi">步数契约金</text>
+            <view class="acsc">
+                <text class="yunum">{{Activitylist.tomorrow.entryfee}}</text>
+                <text class="yuam">{{setaa.coinname}}/人</text>
+            </view>
+        </view>
+        <view class="xiaxjia">
+            <text class="ruag">如何赚取步数奖励金？</text>
+            <view class="baifuja">
+                <image class="daxaio" src="../../resource/images/t1.png"></image>
+                <view class="baifuja_one">
+                    <view class="yuitwo">
+                        <text class="yuitwo_i">报名参赛</text>
+                        <text class="yuitwo_l"></text>
+                    </view>
+                    <text class="zhiju">支付{{Activitylist.tomorrow.entryfee}}{{setaa.coinname}}步数契约金，即可加入{{Activitylist.tomorrow.day}}/周{{Activitylist.tomorrow.week}}】{{Activitylist.tomorrow.step}}步挑战活动</text>
+                </view>
+            </view>
+            <view class="baifuja">
+                <image class="daxaio" src="../../resource/images/t2.png"></image>
+                <view class="baifuja_one">
+                    <view class="yuitwo">
+                        <text class="yuitwo_i">运动达标</text>
+                        <text class="yuitwo_l">【注意】24点前请登录小程序同步最新步数</text>
+                    </view>
+                    <text class="zhiju">活动当日走满{{Steplist.step}}即可达标，获得奖励资格</text>
+                </view>
+            </view>
+            <view class="baifuja">
+                <image class="daxaio" src="../../resource/images/t3.png"></image>
+                <view class="baifuja_one">
+                    <view class="yuitwo">
+                        <text class="yuitwo_i">获得奖励</text>
+                        <text class="yuitwo_l"></text>
+                    </view>
+                    <text class="zhiju">比赛结束后达标用户平分步数奖金</text>
+                </view>
+            </view>
+        </view>
+    </view>
+    <view bindtap="bao" class="bao">{{status==1?'已报名':'立即报名'}}</view>
+    <view class="cxhenggi" wx:if="{{success}}">
+        <view class="yaohu">
+            <image class="bhs" src="../../resource/images/bhs.png"></image>
+            <image class="bhs_two" src="../../resource/images/hua.png"></image>
+            <text class="chuda">成功报名【8月16日/周四】{{Steplist.step}}挑战活动</text>
+            <view class="canyu">
+                <view class="zhyua">
+                    <image class="daixoa" src="../../resource/images/703458355740846003.png"></image>
+                    <text class="bvian">08.15 今天</text>
+                    <text class="baiv">报名参加明日挑战</text>
+                </view>
+                <view class="zhyua">
+                    <image class="daixoa" src="../../resource/images/763942401702959371.png"></image>
+                    <text class="bvian">{{Steplist.starttime}}</text>
+                    <text class="baiv">挑战启动，开始计步</text>
+                </view>
+                <view class="zhyua">
+                    <image class="daixoa" src="../../resource/images/763942401702959371.png"></image>
+                    <text class="bvian">{{Steplist.endtime}}   </text>
+                    <text class="baiv">挑战结束，停止同步步数逾期同步的步数无效</text>
+                </view>
+                <view class="zhyua">
+                    <image class="daixoa" src="../../resource/images/681734631583167910.png"></image>
+                    <text class="bvian">08.17 后天 </text>
+                    <text class="baiv">算收益，派发奖励金</text>
+                </view>
+                <view class="shu"></view>
+            </view>
+            <text class="xhia">【注意】24点前请登录步步换同步最新步数</text>
+            <view class="zhi">知道了</view>
+        </view>
+    </view>
+</view>

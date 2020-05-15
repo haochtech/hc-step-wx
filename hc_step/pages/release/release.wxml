@@ -1,0 +1,55 @@
+<view class="release">
+    <view class="RefundsBox">
+        <textarea autoHeight bindinput="bindTextAreaBlur" class="textarea borderImg" cursorSpacing="100rpx" maxlength="500" placeholder="{{txt||'这一刻的想法...'}}" placeholderClass="phcolor" showConfirmBar="{{false}}" value="{{txt}}"></textarea>
+    </view>
+    <view class="UploadVoucher">
+        <view class="UploadImg">
+            <view class="img-list">
+                <view class="img-item" wx:for="{{pics}}" wx:key="index">
+                    <image bindlongpress="bindlongpressimg" data-id="{{index}}" src="{{item}}"></image>
+                    <image bindtap="remove" class="delat" data-index="{{index}}" src="../../resource/images/guane.png"></image>
+                </view>
+                <view class="chooseimg">
+                    <view class="weui-uploader__input-box"></view>
+                </view>
+            </view>
+            <view catchtap="previewImage" class="FUImg Img" data-url="{{item}}" wx:for="{{arr}}" wx:key="arr">
+                <image class="voucher" mode="aspectFill" src="{{item}}"></image>
+                <image catchtap="delImg" class="DELETE" data-type="{{index}}" src="../../resource/images/close.png"></image>
+            </view>
+            <view bindtap="uploadDetailImage" class="AUImg Img">
+                <image src="../../resource/images/release_picture.png"></image>
+            </view>
+        </view>
+        <view class="addressBox">
+            <view bindtap="map" class="addressInfo" wx:if="{{addressname==''||addressname==undefined}}">
+                <image src="../../resource/images/address.png"></image>
+                <text>点击获取位置</text>
+            </view>
+            <view class="addressName" wx:else>
+                <text>{{addressname}}</text>
+                <text bindtap="detail_two" class="delAddress">删除</text>
+            </view>
+        </view>
+        <view class="topic">
+            <view class="topic_one" wx:if="{{hotissus}}">
+                <view class="topic_uis">{{hotissus}}</view>
+                <image bindtap="dleade" src="../../resource/images/guane.png"></image>
+            </view>
+            <view class="topic_one" wx:else>
+                <text class="topic_t">#参与话题</text>
+                <text class="topic_can">参与话题可获得步友关注哦</text>
+            </view>
+        </view>
+        <view class="huatira">
+            <image src="../../resource/images/9a192a45e5dae13d3425ab8b39d19ed.png"></image>
+            <text>推荐话题</text>
+        </view>
+        <view class="huati">
+            <text bindtap="yaddv" class="{{thei==index?'huati_zi':''}}" data-index="{{index}}" data-text="{{item.title}}" data-topic_id="{{item.id}}" wx:for="{{yao}}">{{item.title}}</text>
+        </view>
+    </view>
+    <view class="submit">
+        <button bindtap="submit">发布</button>
+    </view>
+</view>

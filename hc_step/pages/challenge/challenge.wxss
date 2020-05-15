@@ -1,0 +1,274 @@
+page {
+    background: #f2f2f2;
+    width: 100%;
+    height: 100%;
+}
+
+.zongz {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.herad {
+    width: 100%;
+    height: 250rpx;
+    position: relative;
+}
+
+.herad_img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+}
+
+.tif {
+    width: 100%;
+    height: 90rpx;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+    padding-top: 40rpx;
+}
+
+.tif text {
+    color: #666666;
+    font-size: 23rpx;
+}
+
+.tif text:first-child {
+    color: #000000;
+    font-size: 34rpx;
+}
+
+.yuikh {
+    width: 90%;
+    margin: 0 auto;
+    background: #fff;
+    border-radius: 15rpx;
+    margin-top: -20rpx;
+}
+
+.yuikh_ijh {
+    width: 98%;
+    height: 200rpx;
+    padding: 40rpx 0;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-between;
+    margin: 0 auto;
+    border-bottom: 2rpx solid #f0f0f0;
+}
+
+.buyuhi {
+    color: #666666;
+    font-size: 25rpx;
+}
+
+.yuam {
+    color: #666666;
+    font-size: 22rpx;
+}
+
+.yunum {
+    color: #ae7cfa;
+    font-size: 63rpx;
+}
+
+.xiaxjia {
+    width: 100%;
+    padding-bottom: 70rpx;
+}
+
+.ruag {
+    color: #333333;
+    width: 100%;
+    text-align: center;
+    font-size: 33rpx;
+    display: flex;
+    justify-content: center;
+    margin: 33rpx 0;
+}
+
+.baifuja {
+    width: 100%;
+    padding: 0 15rpx;
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 34rpx;
+}
+
+.daxaio {
+    width: 67rpx;
+    height: 67rpx;
+    display: block;
+    margin-right: 15rpx;
+}
+
+.baifuja_one {
+    display: flex;
+    width: 80%;
+    flex-direction: column;
+}
+
+.zhiju {
+    color: #666666;
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+    font-size: 25rpx;
+}
+
+.yuitwo {
+    display: flex;
+    margin-bottom: 17rpx;
+}
+
+.yuitwo_i {
+    color: #666666;
+    font-size: 30rpx;
+    width: 138rpx;
+}
+
+.yuitwo_l {
+    color: #ae7cfa;
+    font-size: 23rpx;
+    width: 400rpx;
+}
+
+.bao {
+    width: 100%;
+    height: 100rpx;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    bottom: 0;
+    background: linear-gradient(to right,#a101ff,#6484ff);
+    left: 0;
+    color: #ffffff;
+    font-size: 33rpx;
+}
+
+.cxhenggi {
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.8);
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+.yaohu {
+    width: 75%;
+    position: relative;
+    top: 10%;
+    left: 12.5%;
+    height: 840rpx;
+    border-radius: 15rpx;
+    overflow: hidden;
+}
+
+.bhs {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+.bhs_two {
+    width: 160rpx;
+    height: 95rpx;
+    margin: 0 auto;
+    display: block;
+    margin-top: 30rpx;
+}
+
+.chuda {
+    color: #333333;
+    font-size: 25rpx;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 116rpx;
+    font-weight: 700;
+}
+
+.canyu {
+    width: 83%;
+    margin: 0 auto;
+    height: 293rpx;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+}
+
+.zhyua {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.daixoa {
+    width: 50rpx;
+    height: 50rpx;
+    margin-right: 20rpx;
+}
+
+.bvian {
+    color: #666666;
+    font-size: 23rpx;
+    width: 135rpx;
+    margin-right: 45rpx;
+}
+
+.baiv {
+    width: 257rpx;
+    color: #666666;
+    font-size: 23rpx;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.shu {
+    width: 3rpx;
+    height: 100%;
+    background: #bdb8ff;
+    position: absolute;
+    top: 0;
+    left: 24rpx;
+    z-index: -1;
+}
+
+.xhia {
+    color: #ae7cfa;
+    font-size: 21rpx;
+    width: 100%;
+    text-align: center;
+    display: block;
+    margin-top: 60rpx;
+}
+
+.zhi {
+    width: 408rpx;
+    height: 89rpx;
+    display: flex;
+    background: linear-gradient(to right,#a101ff,#6484ff);
+    border-radius: 50rpx;
+    color: #fefefe;
+    font-size: 36rpx;
+    align-items: center;
+    margin: 40rpx auto 0;
+    justify-content: center;
+}

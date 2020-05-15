@@ -1,0 +1,67 @@
+<view class="xmad-h5">
+    <view wx:for="{{dataJson}}" wx:for-item="it" wx:key="index">
+        <view class="img-container" wx:if="{{it.type=='banner'}}">
+            <swiper autoplay="{{autoplay}}" circular="{{circular}}" class="swiper-container" duration="{{duration}}" indicatorDots="{{indicatorDots}}" interval="{{interval}}">
+                <swiper-item wx:for="{{it.data}}" wx:for-index="index1" wx:for-item="url" wx:key="index1">
+                    <image src="{{url}}" style="width: 100%; height: 100%"></image>
+                </swiper-item>
+            </swiper>
+        </view>
+        <view class="image-container" wx:if="{{it.type=='imgs'}}">
+            <image mode="widthFix" src="{{it.imgUrl}}" style="width: 100%"></image>
+        </view>
+        <view class="form-container" wx:if="{{it.type=='form'}}">
+            <view class="form-title">
+                <text class="h2">{{it.data.config.formTitle}}</text>
+            </view>
+            <view class="form-content">
+                <form bindsubmit="submitForm">
+                    <view class="goods-item">
+                        <view class="goods-name">{{it.data.config.goods.name}}</view>
+                        <view class="goods-price">￥{{it.data.config.goods.price}}</view>
+                    </view>
+                    <view class="goods-item" wx:for="{{it.data.config.goods.details}}" wx:for-index="index2" wx:for-item="detail" wx:key="index2">
+                        <view class="detail-name">{{detail.name}}</view>
+                        <view class="detail-select">
+                            <view bindtap="checkItem" class="detail-item {{item.checked?'selected':''}}" data-i="{{index2}}" data-idx="{{idx}}" data-name="{{item.label}}" wx:if="{{item}}" wx:for="{{detail.values}}" wx:for-index="idx" wx:key="idx">{{item.label}}</view>
+                        </view>
+                    </view>
+                    <view class="goods-item goods-num">
+                        <view class="goods-num-name">数量</view>
+                        <view class="goods-num-calc xmad-num-picker">
+                            <view bindtap="_subNum" class="sub {{num.canSub?'':'disabled'}}">
+                                <text>-</text>
+                            </view>
+                            <input bindblur="_inputNum" maxlength="3" type="number" value="{{num.total}}"></input>
+                            <view bindtap="_addNum" class="add {{num.canAdd?'':'disabled'}}">
+                                <text>+</text>
+                            </view>
+                        </view>
+                    </view>
+                    <view class="goods-item goods-delivery">
+                        <view class="detail-name">付款方式</view>
+                        <view class="detail-select">
+                            <view class="detail-item selected">货到付款</view>
+                        </view>
+                    </view>
+                    <view class="goods-item" wx:if="{{it.data.needs.leave_msg}}">
+                        <textarea name="leave_msg" placeholder="留言" rows="5"></textarea>
+                    </view>
+                    <view class="goods-item">
+                        <button class="sub-button" formType="submit" hoverClass="none" wx:if="{{hasAuth}}">{{it.data.config.button1}}</button>
+                        <button bindopensetting="setCallBack" openType="openSetting" wx:else>授权地址信息</button>
+                    </view>
+                    <view class="goods-item disclaimer">
+                        <text>--小盟平台仅向商家提供技术服务--</text>
+                    </view>
+                </form>
+            </view>
+            <view bindtap="hotLine" class="xmad-contact" wx:if="{{it.data.config.contactPhone}}">
+                <image src="http://aldpicsh-1252823355.cossh.myqcloud.com/ad_project/1541060632.jpg"></image>
+            </view>
+            <view bindtap="toDetail" class="quick-icon">
+                <view class="icon">立即下单</view>
+            </view>
+        </view>
+    </view>
+</view>

@@ -1,0 +1,10 @@
+<view bindtap="dians" class="tongzxi">
+    <image src="../../resource/images/85658cd8df53a0eb31a7f392b14c70a.png"></image>
+    <text>动态消息</text>
+    <image src="../../resource/images/xiang.png"></image>
+</view>
+<view class="tongzxi">
+    <text style="margin:0;">系统消息</text>
+</view>
+<view class="zanwu">{{setaa.notice}}</view>
+<Icon id="Icon" img="{{iconimh}}" phone="{{phone}}" poc="{{poc}}" txt="{{txttex}}"></Icon>

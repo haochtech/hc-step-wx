@@ -1,0 +1,26 @@
+<view class="main">
+    <image class="main_img" src="{{dianpi.topbg}}"></image>
+    <view class="main_view">
+        <view class="mar_ywi">
+            <text>店铺</text>
+            <text class="yihaujn">{{dianpi.shopname}}</text>
+        </view>
+        <view class="mar_ywi">
+            <text>用户名</text>
+            <text class="yihaujn">{{dianpi.username}}</text>
+        </view>
+        <view class="mar_ywi">
+            <text>商品名</text>
+            <text class="yihaujn">{{dianpi.goodsname}}</text>
+        </view>
+        <view class="mar_ywi">
+            <text>支付时间</text>
+            <text class="yihaujn">{{dianpi.paytime}}</text>
+        </view>
+        <view class="mar_ywi">
+            <text>核销状态</text>
+            <text class="yihaujnl">{{dianpi.hexiaostatus}}</text>
+        </view>
+    </view>
+    <image bindtap="Hexiaoshenhe" class="quesau" src="../../resource/images/iaOS_03.png"></image>
+</view>

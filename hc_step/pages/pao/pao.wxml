@@ -1,0 +1,3 @@
+<view class="marquee_container" hidden="{{npm}}" style="--marqueeWidth--:-104px">
+    <view class="marquee_text">测试跑马灯效果</view>
+</view>

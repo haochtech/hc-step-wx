@@ -1,0 +1,20 @@
+<import src="../topic/topic"></import>
+<template is="topic" data="{{Dtlist:Dtlist,user_id:user_id}}"></template>
+<view class="baowu">
+    <view class="dianping" wx:for="{{Dtlist[0].comment}}">
+        <image src="{{item.head_pic}}"></image>
+        <view class="dianping-view">
+            <text class="dianping_name">{{item.nick_name}}</text>
+            <text class="dianping_time">{{item.time}}</text>
+            <text class="dianping_p">{{item.content}}</text>
+        </view>
+    </view>
+</view>
+<view bindtap="complete" class="seyou">
+    <text>说点什么吧</text>
+</view>
+<view class="input_wice" hidden="{{!Ping}}">
+    <image bindtap="complete" class="input_wiceimg" src="../../resource/images/xai.png"></image>
+    <textarea autoFocus="{{focus}}" bindinput="content" class="input_text" focus="{{focus}}" placeholder="说点什么吧" value="{{content}}"></textarea>
+    <view bindtap="Addpl" class="input_fa">发送</view>
+</view>

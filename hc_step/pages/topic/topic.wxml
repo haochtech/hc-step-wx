@@ -1,0 +1,53 @@
+<template name="topic">
+    <view class="community">
+        <view>
+            <view class="info-box" wx:for="{{Dtlist}}" wx:for-index="key" wx:for-item="vimg">
+                <view class="content" data-id="{{item.id}}" data-userid="{{item.userId}}">
+                    <view bindtap="topic_details" class="left" data-detailsid="{{vimg.id}}">
+                        <image catchtap="memid" data-my_id="{{user_id}}" data-target_id="{{vimg.user_id}}" src="{{vimg.head_pic}}"></image>
+                    </view>
+                    <view bindtap="topic_details" class="right" data-detailsid="{{vimg.id}}">
+                        <view class="name-box">
+                            <text class="name">{{vimg.nick_name}}</text>
+                            <view catchtap="addfollow" class="follow {{vimg.status==0?'followwith':''}}" data-follow_id="{{vimg.user_id}}" data-status="{{vimg.status}}" data-user_id="{{user_id}}" id="{{key}}" wx:if="{{user_id!=vimg.user_id}}">{{vimg.status==0?'+关注':'取消关注'}}</view>
+                        </view>
+                        <view catchtap="topic" class="topic_vire" data-topic_id="{{vimg.topic_id}}" wx:if="{{vimg.topic}}">{{vimg.topic}}</view>
+                        <view class="{{vimg.foldlength?'shrink':'substance'}}" wx:if="{{vimg.content}}">{{vimg.content}}</view>
+                        <view catchtap="deploy" class="fold" id="{{key}}" wx:if="{{vimg.content&&vimg.zishu>70}}">
+                            <image class="{{vimg.foldlength?'':'tranf'}}" src="../../resource/images/xai.png"></image>
+                        </view>
+                        <view class="ytua " wx:if="{{vimg.content_img.length!=4&&vimg.content_img.length!=1}}">
+                            <image catchtap="follow" data-src="{{item}}" id="{{key}}" src="{{item}}" wx:if="{{vimg.content_img!=''}}" wx:for="{{vimg.content_img}}"></image>
+                        </view>
+                        <view class="ytua_one" wx:if="{{vimg.content_img.length==4}}">
+                            <image catchtap="follow" data-src="{{item}}" id="{{key}}" src="{{item}}" wx:if="{{vimg.content_img!=''}}" wx:for="{{vimg.content_img}}"></image>
+                        </view>
+                        <view class="ytua_two" wx:if="{{vimg.content_img.length==1}}">
+                            <image catchtap="follow" data-src="{{item}}" id="{{key}}" mode="widthFix" src="{{item}}" wx:if="{{vimg.content_img!=''}}" wx:for="{{vimg.content_img}}"></image>
+                        </view>
+                        <view class="maiyua">{{vimg.time}}</view>
+                        <view catchtap="map" class="juatime" data-latitude="{{vimg.latitude}}" data-longitude="{{vimg.longitude}}" data-position="{{vimg.position}}" wx:if="{{vimg.position}}">
+                            <image src="../../resource/images/ty.png"></image>
+                            <text>{{vimg.position}}</text>
+                        </view>
+                    </view>
+                </view>
+                <view class="sava">
+                    <button class="share" data-detailsid="{{vimg.id}}" openType="share">
+                        <image src="../../resource/images/fenya.png"></image>
+                    </button>
+                    <view bindtap="topic_details" class="share" data-detailsid="{{vimg.id}}">
+                        <image src="../../resource/images/xiea.png"></image>
+                        <text>{{vimg.pl_num}}</text>
+                    </view>
+                    <view bindtap="Fabulous" class="share" data-dt_id="{{vimg.id}}" data-is_zan="{{vimg.is_zan}}" id="{{key}}">
+                        <image src="../../resource/images/xinxin.png" wx:if="{{vimg.is_zan==0}}"></image>
+                        <image src="../../resource/images/fabulous.png" wx:else></image>
+                        <text>{{vimg.zan}}</text>
+                    </view>
+                </view>
+                <view class="aiana"></view>
+            </view>
+        </view>
+    </view>
+</template>

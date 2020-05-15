@@ -1,0 +1,3 @@
+<view class="icon">
+    <image bindtap="porc" data-phone="{{phone}}" data-poc="{{poc}}" data-txt="{{txt}}" src="{{img}}" wx:if="{{poc!=0}}"></image>
+</view>

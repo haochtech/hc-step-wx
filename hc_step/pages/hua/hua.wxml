@@ -1,0 +1,8 @@
+<view class="container">
+    <view bindtouchmove="touchmove" bindtouchstart="touchstart" class="touch-item {{item.isTouchMove?'touch-move-active':''}}" data-index="{{index}}" wx:for="{{items}}">
+        <view class="content">{{item.content}}</view>
+        <view catchtap="del" class="del" data-index="{{index}}">
+            <image src="../../resource/images/xf.png"></image>
+        </view>
+    </view>
+</view>

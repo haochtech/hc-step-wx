@@ -1,0 +1,50 @@
+<view class="xmad-h5">
+    <view wx:for="{{dataJson}}" wx:for-item="it" wx:key="index">
+        <view class="img-container" wx:if="{{it.type=='banner'}}">
+            <swiper autoplay="{{autoplay}}" circular="{{circular}}" class="swiper-container" duration="{{duration}}" indicatorDots="{{indicatorDots}}" interval="{{interval}}">
+                <swiper-item wx:for="{{it.data}}" wx:for-index="index1" wx:for-item="url" wx:key="index1">
+                    <image src="{{url}}" style="width: 100%; height: 100%"></image>
+                </swiper-item>
+            </swiper>
+        </view>
+        <view class="image-container" wx:if="{{it.type=='imgs'}}">
+            <image mode="widthFix" src="{{it.imgUrl}}" style="width: 100%"></image>
+        </view>
+        <view class="form-container" wx:if="{{it.type=='form'}}">
+            <view class="form-title">
+                <text class="h2">{{it.data.config.formTitle}}</text>
+            </view>
+            <view class="form-content">
+                <form bindsubmit="submitForm">
+                    <view class="form-item" wx:if="{{it.data.needs.name}}">
+                        <input name="name" placeholder="姓名"></input>
+                    </view>
+                    <view class="form-item" wx:if="{{it.data.needs.sex}}">
+                        <radio-group class="radio-group" name="sex">
+                            <label class="radio" wx:for="{{genders}}" wx:for-index="index2" wx:for-item="gender" wx:key="index2">
+                                <radio checked="{{gender.checked}}" value="{{gender.value}}"></radio>{{gender.name}}
+              </label>
+                        </radio-group>
+                    </view>
+                    <view class="form-item" wx:if="{{it.data.needs.phone}}">
+                        <input name="phone" placeholder="手机号码" type="number"></input>
+                    </view>
+                    <view class="form-item" wx:if="{{it.data.needs.area}}">
+                        <picker bindchange="areaChange" mode="region" name="area" value="{{area}}">
+                            <view wx:if="{{area.length}}">
+                {{area}}
+              </view>
+                            <view class="placeholder" wx:else>地区</view>
+                        </picker>
+                    </view>
+                    <view class="form-item item-textarea" wx:if="{{it.data.needs.leave_msg}}">
+                        <textarea name="leave_msg" placeholder="留言" rows="5"></textarea>
+                    </view>
+                    <view class="form-item">
+                        <button class="sub-button" formType="submit" hoverClass="none">{{it.data.config.button2}}</button>
+                    </view>
+                </form>
+            </view>
+        </view>
+    </view>
+</view>

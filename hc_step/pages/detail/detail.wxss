@@ -1,0 +1,919 @@
+.detail {
+    width: 100%;
+    height: 100%;
+    padding-bottom: 110rpx;
+}
+
+.daxia {
+    width: 100%;
+    height: 700rpx;
+}
+
+.slide-image {
+    width: 100%;
+    height: 100%;
+}
+
+.shpinsha {
+    width: 100%;
+    height: 220rpx;
+    padding: 22rpx;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+}
+
+.shanui {
+    color: #3a3a3a;
+    font-size: 25rpx;
+}
+
+.csadca {
+    width: 626rpx;
+    margin: 0 auto;
+    display: block;
+}
+
+.shanui_two {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.head_one {
+    display: flex;
+    align-items: center;
+}
+
+.head_one .hongf {
+    color: #e14538;
+    font-size: 26rpx;
+}
+
+.head_one .hongh {
+    color: #9a9a9a;
+    font-size: 20rpx;
+    text-decoration: line-through;
+    margin-left: 20rpx;
+}
+
+.head_one image {
+    width: 33rpx;
+    height: 33rpx;
+    margin-right: 15rpx;
+}
+
+.yuan {
+    width: 100%;
+    height: 110rpx;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #fff;
+}
+
+.baoyi {
+    color: #9a9a9a;
+    font-size: 25rpx;
+}
+
+.yaifd {
+    width: 90%;
+    margin: 0 auto;
+    height: 80rpx;
+    border-radius: 50rpx;
+    background: #838e73;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #ffffff;
+    font-size: 30rpx;
+    background: linear-gradient(#a100ff,#6485ff);
+}
+
+.dibu {
+    width: 75%;
+    height: 88rpx;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50px;
+    overflow: hidden;
+}
+
+.wxParse {
+    margin-bottom: 110rpx;
+    width: 100%;
+}
+
+.wxParse image {
+    width: 100%;
+}
+
+.wxParse-p image {
+    width: 100%;
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.button-hover {
+    background-color: none;
+}
+
+button {
+    padding: 0;
+    margin: 0;
+    border-radius: 0;
+    background: none;
+    line-height: normal;
+}
+
+button::after {
+    content: none;
+}
+
+.record {
+    height: 75rpx;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.record image {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+.record text {
+    color: #000000;
+    font-size: 30rpx;
+}
+
+.lialist {
+    width: 100%;
+    padding: 0 35rpx;
+    box-sizing: border-box;
+}
+
+.lialist_ona {
+    width: 100%;
+    height: 80rpx;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2rpx solid #eeeeee;
+}
+
+.lialist_onaing {
+    width: 66rpx;
+    height: 66rpx;
+    border-radius: 100%;
+}
+
+.yuidaj {
+    color: #000000;
+    font-size: 30rpx;
+    margin-right: auto;
+    margin-left: 23rpx;
+}
+
+.csaca {
+    color: #818181;
+    font-size: 25rpx;
+}
+
+.diana {
+    width: 100%;
+    height: 75rpx;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #000;
+    font-size: 28rpx;
+}
+
+.dibu text {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #e14538;
+    color: #fff;
+    font-size: 35rpx;
+}
+
+.dibu .yand {
+    background: #48c301;
+}
+
+.weixiaof {
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.5);
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+.weixiaof_yui {
+    width: 80%;
+    height: 598rpx;
+    position: relative;
+    left: 10%;
+    top: 20%;
+    background: #fff;
+    padding-bottom: 53rpx;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.weixiaof_yui image {
+    width: 100%;
+    height: 350rpx;
+}
+
+.casvsa {
+    width: 500rpx;
+    height: 70rpx;
+    border-radius: 50rpx;
+    display: flex;
+    align-items: center;
+    position: relative;
+    justify-content: center;
+}
+
+.casvsa image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+}
+
+.casvsa text {
+    color: #ffffff;
+    z-index: 2;
+    font-size: 26rpx;
+}
+
+.yunfoa {
+    color: #333333;
+    font-size: 27rpx;
+}
+
+.weixiaof_yui .gunji {
+    width: 50rpx;
+    height: 50rpx;
+    position: absolute;
+    top: 20rpx;
+    right: 25rpx;
+    z-index: 2;
+    display: flex;
+}
+
+.cancel {
+    width: 100%;
+    padding-bottom: 150rpx;
+}
+
+.daxia_two {
+    width: 100%;
+    height: 350rpx;
+}
+
+.hidzhia {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 20rpx 0;
+    padding-left: 34rpx;
+    box-sizing: border-box;
+    align-items: center;
+    border-top: 2rpx solid #eeeeee;
+}
+
+.hidzhia_img {
+    width: 30rpx;
+    height: 42rpx;
+}
+
+.ahnybu {
+    width: 84%;
+    display: flex;
+    flex-direction: column;
+    margin-left: 42rpx;
+}
+
+.ahnybu text {
+    color: #888888;
+    font-size: 27rpx;
+}
+
+.ahnybu text:first-child {
+    color: #333333;
+    font-size: 30rpx;
+}
+
+.bahimf {
+    width: 130rpx;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    border-left: 2rpx solid #eeeeee;
+    justify-content: center;
+}
+
+.bahimf image {
+    width: 55rpx;
+    height: 55rpx;
+}
+
+.yuing {
+    width: 100%;
+    height: 15rpx;
+    background: #f0f0f0;
+}
+
+.yingye {
+    width: 100%;
+    height: 90rpx;
+    padding: 0 23rpx;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    color: #666666;
+    font-size: 30rpx;
+}
+
+.hugfia {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: rgba(0,0,0,0.5);
+    display: block;
+    z-index: 1;
+}
+
+.erawire {
+    width: 78%;
+    margin: 0 auto;
+    height: 625rpx;
+    border-radius: 15rpx;
+    background: #fff;
+    margin-top: 30%;
+    position: relative;
+}
+
+.daintyu {
+    width: 100%;
+    height: 536rpx;
+    position: absolute;
+    top: -55rpx;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+}
+
+.dianjdfpng {
+    width: 112rpx;
+    height: 112rpx;
+    border-radius: 100%;
+}
+
+.sahn_text {
+    color: #888888;
+    font-size: 28rpx;
+}
+
+.sahn_texwt {
+    color: #333333;
+    font-size: 33rpx;
+}
+
+.sahn_img {
+    width: 264rpx;
+    height: 264rpx;
+}
+
+.hyma {
+    height: 100rpx;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #666666;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    font-size: 25rpx;
+    border-bottom: 2rpx dotted #ececec;
+}
+
+.uoji {
+    width: 40rpx;
+    height: 40rpx;
+    position: absolute;
+    top: 16rpx;
+    right: 16rpx;
+}
+
+.yuiodsa {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.yuiodsa_seven {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: center;
+    height: 20rpx;
+    margin-top: 42rpx;
+}
+
+.yuiodsa_seven text {
+    color: #4a4a4a;
+    font-size: 41rpx;
+}
+
+.yuiodsa_seven .sve {
+    color: #a200ff;
+}
+
+.needs {
+    color: #666666;
+    font-size: 30rpx;
+    margin-top: 20rpx;
+}
+
+.yrenshu {
+    width: 77%;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 36rpx;
+}
+
+.yrenshu_img {
+    width: 16%;
+    height: 130rpx;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20rpx;
+}
+
+.yrenshu_img image {
+    width: 80rpx;
+    height: 80rpx;
+    border-radius: 100%;
+}
+
+.yrenshu_img text {
+    color: #666666;
+    font-size: 22rpx;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    width: 100%;
+    text-align: center;
+}
+
+.fuij {
+    width: 100%;
+    height: 90rpx;
+    border-radius: 50rpx;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.fuij image {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+.fuij .imview {
+    color: #ffffff;
+    font-size: 35rpx;
+}
+
+.feng {
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+}
+
+.fajurf {
+    width: 250rpx;
+    height: 60rpx;
+    border-radius: 50rpx;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.fajurf image {
+    width: 40rpx;
+    height: 40rpx;
+}
+
+.fajurf text {
+    color: #fff;
+    font-size: 30rpx;
+    margin-left: 14rpx;
+}
+
+.qunbuha {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: #000;
+}
+
+.qunbuha image {
+    width: 80%;
+    height: 70%;
+    margin-top: 30rpx;
+}
+
+.nai {
+    width: 100%;
+    height: 100rpx;
+    background: #98be4f;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #ffffff;
+    font-size: 36rpx;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+.registerbtn {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+}
+
+.denglu {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: rgba(0,0,0,0.5);
+    z-index: 10;
+}
+
+.denglu_ong {
+    width: 70%;
+    margin: 0 auto;
+    margin-top: 198rpx;
+    position: relative;
+    border-radius: 15rpx;
+    overflow: hidden;
+}
+
+.denglu_img {
+    width: 100%;
+    display: block;
+    height: 490rpx;
+}
+
+.liange {
+    width: 100%;
+    height: 110rpx;
+    display: flex;
+    background: #fff;
+}
+
+.liange text {
+    color: #9f9f9f;
+    font-size: 25rpx;
+    display: flex;
+    width: 50%;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    background: #fff;
+}
+
+.register {
+    color: #fe4045;
+    font-size: 25rpx;
+    display: flex;
+    width: 49%;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    border-left: 2rpx solid #eee;
+}
+
+.tiancda {
+    width: 98rpx;
+    height: 105rpx;
+    display: flex;
+    align-items: center;
+    padding-bottom: 15rpx;
+    box-sizing: border-box;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.tiancda image {
+    width: 40rpx;
+    height: 40rpx;
+}
+
+.tiancda text {
+    color: #757575;
+    font-size: 25rpx;
+}
+
+.denglu_view {
+    width: 546rpx;
+    height: 437rpx;
+    border-radius: 10rpx;
+    position: relative;
+    background: #fff;
+    display: flex;
+    flex-direction: column;
+    padding: 39rpx 30rpx;
+    box-sizing: border-box;
+}
+
+.denglu_imgh {
+    width: 35rpx;
+    height: 35rpx;
+    position: absolute;
+    top: 20rpx;
+    right: 25rpx;
+}
+
+.jazijia {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.jazijia text {
+    color: #f00d0d;
+    font-size: 31rpx;
+}
+
+.wx-switch-input {
+    width: 82rpx!important;
+    height: 40rpx!important;
+}
+
+.wx-switch-input::before {
+    width: 80rpx!important;
+    height: 36rpx!important;
+}
+
+.wx-switch-input::after {
+    width: 40rpx!important;
+    height: 36rpx!important;
+}
+
+.ttiao {
+    width: 100%;
+    height: 2rpx;
+    background: #efefef;
+    margin: 47rpx 0;
+}
+
+.cacddvdgb {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.cacddvdgb text {
+    color: #121212;
+    font-size: 27rpx;
+}
+
+.cacddvdgb text:first-child {
+    color: #888888;
+    font-size: 23rpx;
+}
+
+.zhaivn {
+    width: 80%;
+    height: 90rpx;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #ffffff;
+    background: linear-gradient(to right,#6583ff,#a201ff);
+    border-radius: 50rpx;
+    font-size: 36rpx;
+    margin: 0 auto;
+    margin-top: 60rpx;
+}
+
+.csajhfia {
+    font-size: 30rpx;
+    margin-bottom: 30rpx;
+}
+
+.csajhfia text {
+    font-size: 32rpx;
+}
+
+.poster {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: rgba(0,0,0,0.5);
+    z-index: 100;
+}
+
+.canvas {
+    width: 300px;
+    margin: 100rpx auto 0;
+    border: 2rpx solid #eee;
+    background: #fff;
+}
+
+.myCanvas {
+    width: 300px;
+    height: 820rpx;
+}
+
+.cover-view {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 40rpx;
+    margin-bottom: 20rpx;
+    box-sizing: border-box;
+}
+
+.but {
+    width: 48%;
+    height: 65rpx;
+    border-radius: 50rpx;
+    display: flex!important;
+    align-items: center;
+    justify-content: center;
+    padding: 0 15rpx;
+    box-sizing: border-box;
+    background: #f5e752;
+}
+
+.but .wx-button-cover-view-wrapperm {
+    width: 100%;
+    height: 100%;
+    display: flex!important;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.but .wx-button-cover-view-inner {
+    width: 100%;
+    height: 100%;
+    display: flex!important;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.but image {
+    width: 30rpx;
+    height: 30rpx;
+    line-height: 50rpx;
+}
+
+.but text {
+    font-size: 20rpx;
+    color: #bf2b21;
+    line-height: 50rpx;
+    padding-left: 10rpx;
+}
+
+.but_re {
+    background: #e25d4e;
+}
+
+.but_re text {
+    color: #fff;
+    line-height: 50rpx;
+}
+
+.poster_img {
+    position: absolute;
+    top: 40rpx;
+    right: 62rpx;
+    width: 50rpx;
+    height: 50rpx;
+    display: block;
+}
+
+.canvas_img {
+    width: 500rpx;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 auto;
+}
+
+.canvas_img_o {
+    font-size: 30rpx;
+    color: #000000;
+    margin-top: 20rpx;
+}
+
+.canvas_img_t {
+    font-size: 30rpx;
+    color: #d6252f;
+    margin-top: 20rpx;
+}
+
+.canvas_img_s {
+    font-size: 28rpx;
+    color: #b0abab;
+    margin-top: 20rpx;
+    height: 28rpx;
+}
+
+.canvas_img_f {
+    width: 100%;
+    height: 500rpx;
+    margin-top: 20rpx;
+}
+
+.canvas_img_e {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    margin: 20rpx 0 20rpx;
+}
+
+.canvas_img_e image {
+    width: 120rpx;
+    height: 120rpx;
+    margin-left: 20rpx;
+}
+
+.pidn {
+    height: 80rpx;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-right: auto;
+    margin-left: 30rpx;
+}
+
+.pidn text {
+    color: #858585;
+    font-size: 20rpx;
+}
+
+.pidn text:first-child {
+    color: #d6252f;
+    font-size: 30rpx;
+}

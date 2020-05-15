@@ -1,0 +1,27 @@
+<import src="../topic/topic"></import>
+<import src="../topic/topic_g"></import>
+<view class="tabbartop">
+    <text bindtap="followqe" class="{{fowwolindex==index?'fowwolone':''}}" data-index="{{index}}" wx:for="{{fowwol}}">{{item}}</text>
+</view>
+<view class="hottopic">
+    <view class="zhong">
+        <view bindtap="vies_dopeone" class="view_news" wx:if="{{Dt_newsstatus==1}}">新消息 
+    
+  </view>
+    </view>
+    <view class="hottopic_text">{{fowwolindex==0?'热门话题':'我的关注'}}</view>
+    <scroll-view scrollX class="scroll-view_H" style="width: 100%">
+        <view bindtap="topic" class="topic" data-topic_id="{{item.id}}" wx:for="{{yao}}">{{item.title}}</view>
+    </scroll-view>
+</view>
+<view class="" wx:if="{{fowwolindex==0}}">
+    <template is="topic" data="{{Dtlist:Dtlist,user_id:user_id}}"></template>
+    <view class="noMore" hidden="{{Dtlist.length>1}}" style="">没有更多内容了</view>
+</view>
+<view class="" wx:if="{{fowwolindex==1}}">
+    <template is="topic_g" data="{{Dtlist_g:Dtlist_g,user_id:user_id}}"></template>
+    <view class="noMore" hidden="{{Dtlist_g.length>=1}}" style="">没有更多内容了</view>
+</view>
+<view bindtap="release" class="release" hoverClass="none">
+    <image src="{{newset.fabu_icon}}"></image>
+</view>

@@ -1,0 +1,2 @@
+<image class="cac" src="{{setaa.rulepic}}"></image>
+<Icon id="Icon" img="{{iconimh}}" phone="{{phone}}" poc="{{poc}}" txt="{{txttex}}"></Icon>

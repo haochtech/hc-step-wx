@@ -1,0 +1,44 @@
+page {
+    width: 100%;
+    height: 100%;
+    background: #fff;
+}
+
+.main {
+    width: 100%;
+    padding: 30rpx 32rpx 32rpx 32rpx;
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.ciah {
+    width: 49%;
+    height: 413rpx;
+    margin-bottom: 14rpx;
+}
+
+.adBackView {
+    background: #f8f8f8;
+    width: 100%;
+    padding-bottom: 30rpx;
+}
+
+.ad {
+    background: #fff;
+}
+
+.xsiavbds {
+    width: 100%;
+    height: 100%;
+}
+
+.imtyge {
+    width: 90%;
+    margin: 0 auto;
+    height: 300rpx;
+    border-radius: 15rpx;
+    display: block;
+    margin-top: 50rpx;
+}

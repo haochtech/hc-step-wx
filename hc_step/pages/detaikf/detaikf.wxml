@@ -1,0 +1,16 @@
+<view class="tyting" wx:if="{{list.length>=1}}">
+    <text>活动类型</text>
+    <text>参赛币数</text>
+    <text>奖励金币</text>
+    <text>状态</text>
+    <text>时间</text>
+</view>
+<Icon id="Icon" img="{{iconimh}}" phone="{{phone}}" poc="{{poc}}" txt="{{txttex}}"></Icon>
+<view class="tytinga" wx:for="{{list}}">
+    <text class="wuhui">{{item.name}}步</text>
+    <text class="wuhui">{{item.entryfee}}个</text>
+    <text class="redhui" style="color:#{{item.color}}">+ {{item.jiangjin}}个</text>
+    <text class="redhui" style="color:#{{item.color}}">{{item.status}}</text>
+    <text class="hudhui">{{item.time}}</text>
+</view>
+<text class="zanuqadc" wx:if="{{list==''||list==undefind}}">暂无挑战记录</text>

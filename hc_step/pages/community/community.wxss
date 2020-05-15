@@ -1,0 +1,73 @@
+@import "../topic/topic.wxss";
+
+page {
+    padding-top: 80rpx;
+}
+
+.tabbartop {
+    width: 100%;
+    padding: 0 207rpx;
+    box-sizing: border-box;
+    background: #a67ef2;
+    display: flex;
+    height: 85rpx;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    z-index: 10;
+}
+
+.tabbartop text {
+    color: #ffffff;
+    font-size: 32rpx;
+    line-height: 78rpx;
+}
+
+.tabbartop .fowwolone {
+    color: #ffffff;
+    font-size: 36rpx;
+    border-bottom: 4rpx solid #fff;
+}
+
+.view_news {
+    color: #ffffff;
+    font-size: 24rpx;
+    padding: 10rpx 50rpx;
+    border-radius: 10rpx;
+    display: inline-block;
+    background-image: linear-gradient(150deg,#b362ff 15px,#20bdff 90px);
+    margin-top: 30rpx;
+}
+
+.zhong {
+    width: 100%;
+    text-align: center;
+}
+
+.view_news image {
+    width: 20rpx;
+    padding-left: 20rpx;
+    height: 20rpx;
+}
+
+.hottopic {
+    width: 100%;
+    padding-left: 30rpx;
+    box-sizing: border-box;
+}
+
+.scroll-view_H {
+    width: 100%;
+    white-space: nowrap;
+}
+
+.topic {
+    color: #ffffff;
+    font-size: 24rpx;
+    padding: 12rpx 20rpx;
+    border-radius: 50rpx;
+    display: inline-block;
+    background-image: linear-gradient(150deg,#b362ff 15px,#20bdff 90px);
+    margin-right: 22rpx;
+}

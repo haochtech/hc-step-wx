@@ -1,0 +1,23 @@
+<form bindsubmit="formSubmit">
+    <view class="miyua_yui">
+        <view class="suaohja">
+            <text>联系人</text>
+            <input name="userName" placeholder="姓名"></input>
+        </view>
+        <view class="suaohja">
+            <text>手机号码</text>
+            <input name="telNumber" placeholder="电话"></input>
+        </view>
+        <view class="suaohja">
+            <text>地区选择</text>
+            <picker bindchange="bindRegionChange" customItem="{{customItem}}" mode="region" value="{{region}}">
+                <input class="picker" disabled="true" name="region" placeholder="111" value="{{region[0]}} {{region[1]}} {{region[2]}}"></input>
+            </picker>
+        </view>
+        <view class="suaohja">
+            <text>详细地址</text>
+            <input name="detailInfo" placeholder="详细街道地址"></input>
+        </view>
+        <button class="baouya" formType="submit">保存</button>
+    </view>
+</form>

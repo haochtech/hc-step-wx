@@ -1,0 +1,59 @@
+<view class="rankuif">
+    <text bindtap="daio" class="{{qie==0?'qiyu':''}}" data-index="0">{{tex}}</text>
+    <text bindtap="daio" class="{{qie==2?'qiyu':''}}" data-index="2">中奖记录</text>
+</view>
+<view class="avh" wx:if="{{qie==0}}">
+    <view class="duihuan">
+        <text>兑换步数</text>
+        <text>{{setaa.coinname}}</text>
+        <text>兑换时间</text>
+    </view>
+    <view class="duihuan_idal" wx:if="{{qie==0}}" wx:for="{{Log}}">
+        <text>{{item.bushu}}</text>
+        <text>{{item.money}}</text>
+        <text cllass="timne">{{item.timestamp}}</text>
+    </view>
+</view>
+<Icon id="Icon" img="{{iconimh}}" phone="{{phone}}" poc="{{poc}}" txt="{{txttex}}"></Icon>
+<view class="avh" wx:if="{{qie==1}}">
+    <view class="duihuan">
+        <text>奖品名</text>
+        <text>兑换个数</text>
+        <text>兑换时间</text>
+    </view>
+    <view class="duihuan_idal" wx:if="{{qie==1}}" wx:for="{{Logtwo}}">
+        <text>{{item.goods_name}}</text>
+        <text>1</text>
+        <view class="huanhuanji">
+            <view class="weihua" wx:if="{{item.fahuo=='待发货'}}">{{item.fahuo}}</view>
+            <text class="wanhcf" wx:if="{{item.fahuo=='已发货'}}">{{item.fahuo}}</text>
+            <text class="odd" wx:if="{{item.fahuo=='已发货'}}">{{item.expressname}}：{{item.express}}</text>
+            <text class="oddtime">{{item.fahuo=='已发货'?item.fahuotime:item.time}}</text>
+        </view>
+    </view>
+</view>
+<view class="avh" wx:if="{{qie==2}}">
+    <view class="dishi" wx:for="{{Logter}}">
+        <view class="shangoin">
+            <image class="shnpin" src="{{item.main_img}}"></image>
+            <view class="wenj">
+                <text>{{item.goods_name}}</text>
+                <text>{{item.time}}</text>
+            </view>
+            <view class="savdsavds">
+                <text class="savdsavds_text" wx:if="{{item.express}}">{{item.expressname}}：{{item.express}}</text>
+                <text class="dog">{{item.zhuangtai}}</text>
+            </view>
+        </view>
+        <view class="yixsa">
+            <image class="dia" src="../../resource/images/dia.png"></image>
+            <view class="wenj">
+                <text>{{item.userName}}</text>
+                <text>{{item.cityName}}{{item.countyName}}{{item.detailInfo}}</text>
+            </view>
+            <text class="ysai" wx:if="{{item.is_dizhi==1}}">已填写地址</text>
+            <text bindtap="xiu" class="qigtian" data-id="{{item.id}}" wx:if="{{item.is_dizhi==0}}">请填写收货地址</text>
+        </view>
+        <view class="xsav"></view>
+    </view>
+</view>
